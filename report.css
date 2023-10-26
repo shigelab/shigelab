@@ -1,0 +1,230 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import 'node_modules/animate.css/animate.min.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+html{
+    font-size: 180%;
+    background-color: #FCFAF9;
+}
+
+@keyframes scroll-anim{
+    0% {
+        scale: 1 1;
+      }
+    20% {
+        scale: 1 0.9;
+        translate: 0 -10px;
+    }
+    100%{
+        scale: 1 0.8;
+        translate: 0 -10px;
+    }
+}
+
+main{
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    z-index: 1;
+    font-family: Andale Mono;
+    display: flex;
+    max-width: 100%;
+    padding: 15px 2.5vw;
+    margin: 0 auto;
+    background-color: #FCFAF9;
+    color: #333333;
+    align-items: center;
+    justify-content: space-between;
+    /* animation: scroll-anim linear;
+    animation-timeline: scroll(); */
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: inherit; /* don't forget to set a duration! */
+}
+
+header .headline {
+    font-size: 1rem;
+    float: left;
+    letter-spacing: 0.1rem;
+}
+
+.nav-item {
+    list-style: none;
+    display: inline-block;
+    font-size: 0.65rem;
+    padding: 0 0 0 2vw;
+    letter-spacing: 0.05rem;
+}
+
+.nav-item a{
+    color: inherit;
+    text-decoration: none;
+}
+
+div.page {
+    background-color: #FCFAF9;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    /* background-color: red;*/
+}
+
+div.normal{
+    margin: 0 12vw auto 12vw;
+}
+
+div.title {
+    color: #333333;
+    height: auto;
+    margin: 120px 0 30px;
+    text-align: left;
+    width: 920px;
+}
+
+.title h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    overflow: hidden;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    /* background-color: #989796; */
+    margin: 6px 0;
+    position: relative;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #989796;
+}
+
+.line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 20px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #989796;
+}
+
+.title h3 {
+    font-family: Andale Mono;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: lighter;
+    text-align: right;
+    margin: 0.5rem 0 0 0;
+    letter-spacing: 0.1rem;
+}
+
+p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 0.62rem;
+    width: 920px;
+    /* min-height: 80vh; */
+}
+
+.end{
+    width: 920px;
+    margin-top: 2rem;
+}
+
+button {
+    font-family: Andale Mono;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.85rem;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1.8px;
+    border-radius: 3px;
+    padding-left: 0.6rem;
+    letter-spacing: 0.1rem;
+    width: 240px;
+    height: 70px;
+}
+
+button .arrow {
+    width: 32px;
+    height: auto;
+    margin-right: 14px;
+    margin-top: 6px;
+    float: right;
+}
+
+button.center {
+    margin: 16vh auto 18vh auto;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    width: 920px;
+    margin: 120px 0 40px;
+}
+
+.prev{
+    text-align: right;
+    padding-right: 12px;
+}
+
+.prev img.arrow{
+    transform: rotate(180deg);
+    float: left;
+}
+
+.next{
+    text-align: left;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.next img.arrow{
+    margin-left: 10px;
+    float: right;
+}
+
+.back-heart{
+    width: 45vw;
+    height: auto;
+    position: absolute;
+    right: -120px;
+    bottom: -80px;    
+}
+
+
+
+
+footer{
+    font-size: 0.45rem;
+    font-family: Andale Mono;
+    letter-spacing: 0.1rem;
+    color: #333333;
+    background-color: #FCFAF9;
+    text-align: center;
+    padding: 0.4rem;
+}

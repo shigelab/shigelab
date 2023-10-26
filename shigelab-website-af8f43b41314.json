@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "shigelab-website",
+  "private_key_id": "af8f43b41314283c9223fe71e072d700da4630ad",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCfdv/YlIX/w68p\ny3Qt/e7RH+ka8znJfGX3WXn8zr6MGQF1TTWotxhuXpxdbMMtHpiDi4oS0FEMOHLX\n/IsqL07/7ecEqvNYvSYHDS+Oh3LNpFNfkYqX51qlhusyPpMO0FUdVCx1c6nZcsvI\nPdIp24hdQO4q7LS+2ptPETWKZaqAEu6gQ7SoaP2aue3ur0M4iyvMXzsd2K1EUWNS\nvleQaVBnqrgoTk777fIFMmO3JB4rcRvSMvN1FkdM6lQN5fH5ItK6JsZUF9zddW+a\n58NTTvU4dQ7lEKsK5u/bflyBJz045sSTt3nEReJfUpKvLDA/KOJ4S1ioVs5VJVSJ\nahfYNMUXAgMBAAECggEADASwrD0nywqpN6ngTZxFgZhfyrEWVvbbsbEzx74GaWun\nCvt9nFCBJ5K7Qsuw+0RCwJAY1DZdrWFoJZqG6Im2CmuyAIDCPc4y2mj/5d36fo1j\nq6CKxMxIevcFeeNyboIWfOyvok7l0bNcfXDlvboQd6rIAg8vlIsurysmXfhi/Pgr\nXHlgBis7cWqsVDXiFajaYGnGU3934OCI166jXVI2GPH90Z5fWH+DlTCksj0z8EKJ\nEUPcVvtmXuDpMEy/6Jb5NWTt+qH9MdKCt06/nNNqGwt/6QJDKdxFbIg0Ur3t/MiD\nHXcuSlOaMoVUNzYPkWrB+aEDNRE8/MbsCwN9aM37jQKBgQDadebmj4vIw4kUzCQu\n1QeG3mM8c9aBLTfFu6PvAZdrL3WIHZ3O8Xh9l95KD3wGv2M4pvXJr8FJg09lVnAd\nKCciVHncuZqN9GRJhzP/expXbyT3iYTxVtiW4lrX8pG2PMbnIUZM5oiPpYWMQRDc\nxGdoXGK526lPjKM5ypCA/jfK4wKBgQC63d8ACEP1Cp6+lWwOEDeycXjupnlZetrl\nY2zdxD3UKN3suGPrTuAdd8KoZg0ePqc5ANNb2JL58rY/iIrg8+QcrjANWh6ILQkZ\nATN19PrN7sEGM6IwipXwUcqHhOpK3MCVEZbM5MXs8UBnyLSWDNMevB0HMzwoUNba\nxAP/+htvPQKBgDPSJ/WlM2lqSMgwLJ0XV3O8qRmb+NQnn8U934NAg2Sfm2ewbtC6\nIvTX45j511faanTz1fYDxPvlNB47xNiFv9K66zVaqbjmsitm8QS3dOYsrT4y1uBQ\n04vnIdl75uitvhjxobV4MgixIN7GSHO1+zmcQKcJ3j3KhKWe0Wxn4WA1AoGAULzk\nSQNJOWqpQ/cThNAFAJh+g75x1/N4+HuI4hiUDkLKACl7IoQl2RWRiWjuag7v+XUd\n3SUp+8yeabz5JFC8UpgAMwSpBHVQ5Pjb3y9F3gw2YhOVFBwMxJTSSNNo14ehvcan\nvUdrLQDfrvfM7rgDz9e/QwkkCNdEvajLgaHykJECgYBIKpO8su94w6OOMpcfaj3O\nAOQh3zBlfl0Z80qZQT7loNbG1LdDRbzNmccrELMGm3hXzS2Bdhd9T6EorKjq0/n5\nlOQDWR10nOdiHqoFbNugT6VtwFPTYNbiMmLOn/3BV7xShOWu93ljOhn6h3Q1yTUJ\nNgSfEmrhiKCkzYsDKRp7SQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "shigelab@shigelab-website.iam.gserviceaccount.com",
+  "client_id": "105189380983616972040",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/shigelab%40shigelab-website.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

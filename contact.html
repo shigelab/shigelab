@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <meta name="description" content="高知工科大学 情報学群 知覚認知脳情報研究室(繁桝研究室)の問い合わせフォームです。">
+    <link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+
+<body>
+    <header class="animate__animated animate__slideInDown">
+        <h1 class="headline"> SHIGEMASU LAB </h1>
+        <ul class="navi">
+            <li class="nav-item"><a href="index.html">HOME</a></li>
+            <li class="nav-item"><a href="news.html?page=0">NEWS</a></li>
+            <li class="nav-item"><a href="info.html">INFO</a></li>
+            <li class="nav-item"><a href="member.html">MEMBER</a></li>
+            <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="page">
+            <div class="title">
+                <h2>問い合わせ</h2>
+                <div class="line"></div>
+                <h3>CONTACT FORM</h3>
+            </div>
+            <div class="normal">
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdbX3tkUl-IDZS0cPv1Nk-HxOyxsBTIP0K9OrzhUTgX3b-prA/formResponse" 
+                    method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+                    <div class="mail">
+                        <input type="email" name="entry.777656308" placeholder="Email">
+                    </div>
+                    <div class="name">
+                        <input type="text" name="entry.2025586300" placeholder="Name">
+                    </div>
+                    <div class="contact-text">
+                        <textarea type="text" name="entry.885083081" placeholder="Message"></textarea>
+                    </div>
+                    <button class="white center" id="submit" type="submit" value="SEND">
+                        SEND
+                        <img src="image/arrow_white.svg" class="arrow">
+                    </button>
+                </form>
+                <script type="text/javascript">
+                    let submitted = false;
+                </script>
+                <iframe
+                    name="hidden_iframe"
+                    id="hidden_iframe"
+                    style="display: none"
+                    onload="if(submitted){window.location='./thanks.html';}"
+                ></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy;2023 SHIGEMASU LAB
+    </footer>
+</body>
+
+</html>
