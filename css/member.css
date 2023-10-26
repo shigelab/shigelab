@@ -107,7 +107,7 @@ div.title {
 
 .title h2 {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.3rem;
     overflow: hidden;
 }
@@ -195,9 +195,9 @@ div.subtitle {
 .subtitle h2 {
     font-size: 1.2rem;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     position: relative;
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.2rem;
     font-family: 'Noto Sans JP', sans-serif;
 }
 

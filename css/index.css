@@ -108,7 +108,7 @@ div.explain {
 
 .explain_text h3 {
     font-size: 1.8rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.1rem;
     width: 27rem;
     line-height: 1.2;
@@ -188,7 +188,7 @@ div.subtitle {
 .subtitle h2 {
     font-size: 1.2rem;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     position: relative;
     letter-spacing: 0.15rem;
 }
@@ -265,7 +265,7 @@ img.image_logo{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 100px auto;
+    margin: 10vh auto;
 }
 
 .news-title{
