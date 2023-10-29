@@ -69,7 +69,7 @@ header .headline {
 div.page {
     background-color: #FCFAF9;
     width: 100%;
-    height: 110vh;
+    height: 113vh;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -83,12 +83,25 @@ div.normal{
 
 video{
     position: absolute;
-    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 0;
     opacity: .7;
     width: 100%;
+}
+
+#v1{
+    top: 62%;
+}
+
+#v2{
+    top: 55%;
+    width: 108%;
+}
+
+#v3{
+    top: 50%;
+
 }
 
 div .logo {
