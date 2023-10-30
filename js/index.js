@@ -41,7 +41,7 @@ videos.forEach((video, i) => {
 
 var gif_logo = document.querySelector('.gif-logo');
 var logo = document.querySelector('.logo');
-setTimeout(logo_set, 6000); 
+setTimeout(logo_set, 7000); 
 
 function logo_set() {
     gif_logo.animate(
