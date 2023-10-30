@@ -81,7 +81,7 @@ div.normal{
     height: 100vh;
 }
 
-video{
+#v1, #v2, #v3{
     position: absolute;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -104,8 +104,18 @@ video{
 
 }
 
-div .logo {
-    margin: 71vh 0 0 4vw;
+.gif-logo{
+    margin: 66.5vh 0 0 47px;
+    width: 430px;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+}
+
+.logo {
+    opacity: 0;
+    margin: 71vh 0 0 60px;
     width: 420px;
     height: auto;
     position: absolute;

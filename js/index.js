@@ -3,7 +3,8 @@ const videos = [
     document.getElementById("v2"),
     document.getElementById("v3")
   ];
-let currentVideoIndex = 0;
+let currentVideoIndex = getRandomInt(0, videos.length-1);
+console.log(currentVideoIndex);
   
 function playVideo(index) {
     // すべての動画を一時停止
@@ -36,3 +37,40 @@ videos.forEach((video, i) => {
       nextVideo();
     });
 });
+
+
+var gif_logo = document.querySelector('.gif-logo');
+var logo = document.querySelector('.logo');
+setTimeout(logo_set, 6000); 
+
+function logo_set() {
+    gif_logo.animate(
+        [
+            { opacity: 1 },
+            { opacity: 0 }
+        ], 
+        {
+            duration: 1000,
+            fill: 'both'
+        }
+    );
+
+    logo.animate(
+        [
+            { opacity: 0 },
+            { opacity: 1 }
+        ], 
+        {
+            duration: 1000,
+            fill: 'forwards'
+        }
+    );
+
+}
+
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
