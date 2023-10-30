@@ -7,26 +7,28 @@
     overflow-y: hidden;
 }
 
-html{
+html {
     font-size: 180%;
     background-color: #FCFAF9;
 }
 
-@keyframes scroll-anim{
+@keyframes scroll-anim {
     0% {
         scale: 1 1;
-      }
+    }
+
     20% {
         scale: 1 0.9;
         translate: 0 -10px;
     }
-    100%{
+
+    100% {
         scale: 1 0.8;
         translate: 0 -10px;
     }
 }
 
-main{
+main {
     overflow-x: hidden;
 }
 
@@ -47,8 +49,10 @@ header {
     justify-content: space-between;
     /* animation: scroll-anim linear;
     animation-timeline: scroll(); */
-    animation: bounce; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: inherit; /* don't forget to set a duration! */
+    animation: bounce;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: inherit;
+    /* don't forget to set a duration! */
 }
 
 header .headline {
@@ -65,7 +69,7 @@ header .headline {
     letter-spacing: 0.05rem;
 }
 
-.nav-item a{
+.nav-item a {
     color: inherit;
     text-decoration: none;
 }
@@ -80,7 +84,7 @@ div.page {
     /* background-color: red;*/
 }
 
-div.normal{
+div.normal {
     margin: 0 24vw auto 24vw;
 }
 
@@ -138,7 +142,7 @@ div.title {
     letter-spacing: 0.1rem;
 }
 
-input, textarea{
+input, textarea {
     font-family: Andale Mono;
     font-size: 0.65rem;
     border-style: none;
@@ -149,7 +153,7 @@ input, textarea{
     padding: 15px 10px 10px;
 }
 
-.contact-text textarea{
+.contact-text textarea {
     height: 7rem;
 }
 
@@ -167,6 +171,83 @@ button {
     width: 20vw;
     height: 10vh;
     text-align: left;
+    /*アニメーション*/
+    position: relative;
+    overflow: hidden;
+    transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+button span {
+    position: relative;
+    z-index: 3;
+    /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /* color: #FCFAF9; */
+}
+
+button.white:hover span {
+    color: #989796;
+}
+
+button.black:hover span {
+    color: #FCFAF9;
+}
+
+/*== 背景が流れる（左から右） */
+.bgleft:before {
+    content: '';
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /*色や形状*/
+    /* background: #FCFAF9; */
+    /*背景色*/
+    width: 100%;
+    height: 100%;
+    /*アニメーション*/
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+}
+
+/*== 背景が流れる（右から左） */
+.bgright:before {
+    content: '';
+    /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+    /*色や形状*/
+  background:  #333;/*背景色*/
+  width: 100%;
+  height: 100%;
+    /*アニメーション*/
+  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+}
+
+.white:before {
+    background: #FCFAF9;
+}
+
+.black:before {
+    background: #333333;
+}
+
+/*hoverした際の形状*/
+.bgleft:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+/*hoverした際の形状*/
+.bgright:hover:before {
+    transform-origin:right top;
+    transform:scale(1, 1);
 }
 
 button .arrow {
@@ -177,22 +258,23 @@ button .arrow {
     float: right;
 }
 
-button.white{
+button.white {
     color: #FCFAF9;
     border-color: #FCFAF9;
 }
+
 button.black {
     color: #333333;
     border-color: #333333;
 }
 
-button.center{
+button.center {
     margin: 20px auto 0;
     display: block;
 }
 
 
-footer{
+footer {
     font-size: 0.45rem;
     font-family: Andale Mono;
     letter-spacing: 0.1rem;
@@ -203,7 +285,7 @@ footer{
 }
 
 
-.thanks{
+.thanks {
     background-color: #FCFAF9;
     text-align: center;
     color: #333333;
@@ -230,13 +312,14 @@ footer{
     margin: 2px auto 28px;
 }
 
-.thanks h5{
+.thanks h5 {
     font-family: 'Noto Sans JP', sans-serif;
     font-style: normal;
     font-weight: 200;
     font-size: 0.8rem;
     width: 1080px;
 }
+
 .thanks h6 {
     font-family: Andale Mono;
     letter-spacing: 0.05rem;
@@ -244,17 +327,17 @@ footer{
     margin-bottom: 80px;
 }
 
-.back{
+.back {
     text-align: right;
     padding-right: 18px;
 }
 
-.back img.arrow{
+.back img.arrow {
     transform: rotate(180deg);
     float: left;
 }
 
-footer.thanks-footer{
+footer.thanks-footer {
     font-size: 0.45rem;
     font-family: Andale Mono;
     letter-spacing: 0.1rem;

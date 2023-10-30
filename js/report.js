@@ -17,11 +17,11 @@ fetch(api_url)
                 document.getElementById('date').innerText = json[i].date;
                 document.getElementById('p').innerHTML = json[i].p;
                 if(number > 0) {
-                    var prev_element = `<button class="black prev" onclick="location.href='report.html?id=${json[i-1].id}&number=${i-1}'"><img src="image/arrow_black.svg" class="arrow">PREV</button>`;
+                    var prev_element = `<button class="bgright black prev" onclick="location.href='report.html?id=${json[i-1].id}&number=${i-1}'"><span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">PREV</span></button>`;
                     document.getElementById('btns').innerHTML += prev_element;
                 }
                 if(number < json.length-1) {
-                    var back_element = `<button class="black next" onclick="location.href='report.html?id=${json[i+1].id}&number=${i+1}'"><img src="image/arrow_black.svg" class="arrow">NEXT</button>`;
+                    var back_element = `<button class="bgleft black next" onclick="location.href='report.html?id=${json[i+1].id}&number=${i+1}'"><span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">NEXT</span></button>`;
                     document.getElementById('btns').innerHTML += back_element;
                 }
                 flg = true;
@@ -30,11 +30,10 @@ fetch(api_url)
         }
         if(!flg) {
             document.getElementById('p').innerText = 'このページは存在しません';
-            document.getElementById('btns').innerHTML = `<button class="black prev center" onclick="location.href='./news.html'"><img src="image/arrow_black.svg" class="arrow">BACK</button>`;
+            document.getElementById('btns').innerHTML = `<button class="bgright black prev center" onclick="location.href='./news.html'"><span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">BACK</span></button>`;
         }
-
+        button_ani();
     });
-
 
 function getParam(name, url) {
     if (!url) url = window.location.href;

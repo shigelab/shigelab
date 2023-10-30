@@ -69,7 +69,7 @@ header .headline {
     letter-spacing: 0.05rem;
 }
 
-.nav-item a{
+.nav-item a {
     color: inherit;
     text-decoration: none;
 }
@@ -226,6 +226,59 @@ button {
     width: 28vw;
     height: 10vh;
     text-align: left;
+    /*アニメーション*/
+    position: relative;
+    overflow: hidden;
+    transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+button span {
+    position: relative;
+    z-index: 3;
+    /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /* color: #FCFAF9; */
+}
+
+button.white:hover span {
+    color: #989796;
+}
+
+button.black:hover span {
+    color: #FCFAF9;
+}
+
+/*== 背景が流れる（左から右） */
+.bgleft:before {
+    content: '';
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /*色や形状*/
+    /* background: #FCFAF9; */
+    /*背景色*/
+    width: 100%;
+    height: 100%;
+    /*アニメーション*/
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+}
+
+.white:before {
+    background: #FCFAF9;
+}
+
+.black:before {
+    background: #333333;
+}
+
+/*hoverした際の形状*/
+.bgleft:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
 }
 
 button .arrow {
@@ -424,7 +477,7 @@ div.subtitle {
     cursor: pointer;
 }
 
-.js-based{
+.js-based {
     display: none;
 }
 
@@ -458,7 +511,7 @@ div.subtitle {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(51,51,51,0.7);
+    background-color: rgba(51, 51, 51, 0.7);
 }
 
 .eqp-popup .content {
@@ -473,7 +526,7 @@ div.subtitle {
     overflow: hidden;
 }
 
-.content-frame{
+.content-frame {
     border-color: #989796;
     border-style: solid;
     border-radius: 2px;
@@ -482,7 +535,7 @@ div.subtitle {
     height: 100%;
 }
 
-.content img{
+.content img {
     width: 30vw;
     height: auto;
     position: absolute;
@@ -491,7 +544,7 @@ div.subtitle {
     transform: translate(-10%, -50%);
 }
 
-.eqp-pop-title{
+.eqp-pop-title {
     position: relative;
     width: 30vw;
     color: #333333;
@@ -518,7 +571,7 @@ div.subtitle {
     letter-spacing: 0.1rem;
 }
 
-.content p{
+.content p {
     position: relative;
     width: 30vw;
     margin-left: 50%;
