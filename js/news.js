@@ -1,7 +1,7 @@
 let page = getParam('page');
 
 //生成したAPIのURLを指定
-var api_url = 'https://script.google.com/macros/s/AKfycbzP5SEVsma4Urt-7ew9AnwC3mAA9ypWBkVEYKU-QJrI5CbAFt8Po_gYNho38ArQh5TEQA/exec';
+var api_url = 'https://script.google.com/macros/s/AKfycbyl4veaDHtfRGuUxjoj8gra9p65vLb9809AFFVyAKv_WvfXzh7hH37TSyTzpkOYs9_jIQ/exec';
 
 fetch(api_url)
     .then(function (fetch_data) {
@@ -29,8 +29,11 @@ fetch(api_url)
 
             clone_element.querySelector('h5').textContent = json[i].date;
             clone_element.querySelector('h3').textContent = json[i].title;
-            clone_element.querySelector('p').innerText = omittedContent(json[i].p);
+            clone_element.querySelector('p').innerText = omittedContent(json[i].headerText);
             clone_element.querySelector('a').href = `report.html?id=${json[i].id}&number=${i}`;
+            if(json[i].headerImg != "") {
+                clone_element.querySelector('img').setAttribute('src', json[i].headerImg);
+            }
 
             base_element[0].parentNode.appendChild(clone_element); //元となるHTMLの要素の後ろに複製した要素を追加
         }
@@ -41,7 +44,7 @@ fetch(api_url)
 // 引数でcontent.textContentを受け取る。
 function omittedContent(string) {
     // 定数で宣言
-    const MAX_LENGTH = 10;
+    const MAX_LENGTH = 20;
 
     // もしstringの文字数がMAX_LENGTH（今回は10）より大きかったら末尾に...を付け足して返す。
     if (string.length > MAX_LENGTH) {

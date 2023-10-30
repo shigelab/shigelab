@@ -3,7 +3,7 @@ let id = getParam('id');
 let number = getParam('number');
 
 //生成したAPIのURLを指定
-var api_url = 'https://script.google.com/macros/s/AKfycbzP5SEVsma4Urt-7ew9AnwC3mAA9ypWBkVEYKU-QJrI5CbAFt8Po_gYNho38ArQh5TEQA/exec';
+var api_url = 'https://script.google.com/macros/s/AKfycbyl4veaDHtfRGuUxjoj8gra9p65vLb9809AFFVyAKv_WvfXzh7hH37TSyTzpkOYs9_jIQ/exec';
 
 fetch(api_url)
     .then(function (fetch_data) {

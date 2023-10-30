@@ -292,14 +292,14 @@ div.subtitle {
     padding: 2px;
 }
 
-img.image_logo{
-    width: 15vw;
-    height: auto;
-    max-height: 35vh;
+.list-item img{
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 7vw auto;
+    margin: 5px auto;
 }
 
 .news-title{

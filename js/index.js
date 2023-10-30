@@ -3,7 +3,7 @@ const videos = [
     document.getElementById("v2"),
     document.getElementById("v3")
   ];
-let currentVideoIndex = getRandomInt(0, videos.length-1);
+let currentVideoIndex = getRandomInt(0, videos.length);
 console.log(currentVideoIndex);
   
 function playVideo(index) {
