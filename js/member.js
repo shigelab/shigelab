@@ -28,6 +28,8 @@ fetch(api_url)
                     var base_element = document.getElementsByClassName('member-item b4 js-based');
                     var clone_element = base_element[0].cloneNode(true); //元となるHTMLの要素を複製
                     clone_element.classList.remove('js-based'); //複製した要素からクラス削除
+                    if (json[i].image !== "") clone_element.querySelector('img').setAttribute( 'src', 'http://drive.google.com/uc?export=view&id=' + json[i].image ); //src属性に取得した画像を設定;
+                    else clone_element.querySelector('img').setAttribute( 'src', 'image/no_man.png' ); //src属性に取得した画像を設定
                     clone_element.querySelector('.b4N h2').textContent = json[i].name;
                     clone_element.querySelector('.b4N h3').textContent = json[i].e_name;
                     const profile_b4 = generateProfile(json[i]);
@@ -38,6 +40,8 @@ fetch(api_url)
                     var base_element = document.getElementsByClassName('member-item b3 js-based');
                     var clone_element = base_element[0].cloneNode(true); //元となるHTMLの要素を複製
                     clone_element.classList.remove('js-based'); //複製した要素からクラス削除
+                    if (json[i].image !== "") clone_element.querySelector('img').setAttribute( 'src', 'http://drive.google.com/uc?export=view&id=' + json[i].image ); //src属性に取得した画像を設定;
+                    else clone_element.querySelector('img').setAttribute( 'src', 'image/no_man.png' ); //src属性に取得した画像を設定
                     clone_element.querySelector('.b3N h2').textContent = json[i].name;
                     clone_element.querySelector('.b3N h3').textContent = json[i].e_name;
                     const profile_b3 = generateProfile(json[i]);
