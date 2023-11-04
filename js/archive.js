@@ -2,6 +2,8 @@
 //生成したAPIのURLを指定
 var api_url = 'https://script.google.com/macros/s/AKfycbxUMQ9BnNX4OPu446birmZPux2z3TMenGFwefQi7xyelkuU2XDIuv_sdeIOcpANeQnVLw/exec';
 var year_count = 0;
+var M_flg = false;
+var M_title_flg = false;
 
 fetch(api_url)
     .then(function (fetch_data) {
@@ -10,17 +12,28 @@ fetch(api_url)
     .then(function (json) {
         var last_year = json[0].year + 1;
         for (var i = 0; i < json.length; i++) {
+            console.log(json[i].title);
             if (json[i].year === "") break;
-            
+
             if (last_year > json[i].year) {
+                M_title_flg = false;
                 generateTitle(json[i], json[i].year);
                 last_year = json[i].year;
                 year_count++;
+                if (json[i].grade == "M") M_flg = true;
+                else M_flg = false;
             } else {
-                generateList(json[i], last_year);
+                if (json[i].grade == "M" && !M_flg && !M_title_flg) {
+                    generateTitle(json[i], json[i].year);
+                    M_flg = true;
+                    M_title_flg = true;
+                } else {
+                    generateList(json[i], json[i].year);
+                }
             }
         }
-        checkCss();
+        checkCss('M');
+        checkCss('B');
     });
 
 
@@ -41,9 +54,9 @@ function generateTitle(json, year) {
             break;
     }
     clone_element.querySelector('.theme-title').textContent = title;
-    clone_element.querySelector('.theme-title').htmlFor = 'btn' + year;
-    clone_element.querySelector('input').setAttribute("id", 'btn' + year);
-    clone_element.querySelector('.item-list').setAttribute("id", 'item' + year);
+    clone_element.querySelector('.theme-title').htmlFor = 'btn' + year + json.grade;
+    clone_element.querySelector('input').setAttribute("id", 'btn' + year + json.grade);
+    clone_element.querySelector('.item-list').setAttribute("id", 'item' + year + json.grade);
     // 新しい img 要素を追加
     var newImg = document.createElement('img');
     newImg.src = "image/arrow_black.svg";
@@ -57,7 +70,7 @@ function generateTitle(json, year) {
 }
 
 function generateList(json, year) {
-    var list = document.getElementById('item' + year);
+    var list = document.getElementById('item' + year + json.grade);
     // 追加する要素を作成
     var li = document.createElement('li');
     if (json.url != "") {
@@ -73,11 +86,12 @@ function generateList(json, year) {
 
 }
 
-function checkCss() {
+function checkCss(grade) {
     for (var i = year_count; i > 0; i--) {
-        const checkboxSelector = document.querySelector(`#btn${i + 2009}`);
-        const itemSelector = document.querySelector(`#item${i + 2009}`);
-        const arrowSelector = document.querySelector(`#btn${i + 2009} ~ .theme-title .arrow`);
+        if(document.querySelector(`#btn${i + 2009}${grade}`) == null) continue;
+        const checkboxSelector = document.querySelector(`#btn${i + 2009}${grade}`);
+        const itemSelector = document.querySelector(`#item${i + 2009}${grade}`);
+        const arrowSelector = document.querySelector(`#btn${i + 2009}${grade} ~ .theme-title .arrow`);
 
         itemSelector.style.display = 'none';
         arrowSelector.style.transform = 'rotate(0deg)';
