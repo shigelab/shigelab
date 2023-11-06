@@ -38,6 +38,8 @@ fetch(api_url)
             base_element[0].parentNode.appendChild(clone_element); //元となるHTMLの要素の後ろに複製した要素を追加
         }
 
+        // データの読み込みが完了したらローディングアニメーションを非表示に
+        hideLoadingAnimation();
     });
 
 

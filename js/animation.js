@@ -9,7 +9,7 @@ gsap.fromTo(
         autoAlpha: 1, // アニメーション後に出現(透過率0)
         scrollTrigger: {
             trigger: ".subtitle", // アニメーションが始まるトリガーとなる要素
-            toggleActions: "play none none reverse", // 上スクロールで戻る
+            // toggleActions: "play none none reverse", // 上スクロールで戻る
             start: "top center", // アニメーションの開始位置
             // markers: true, // マーカー表示
         },

@@ -11,7 +11,7 @@ fetch(api_url)
             var clone_element = base_element[0].cloneNode(true); //元となるHTMLの要素を複製
             clone_element.classList.remove('js-based'); //複製した要素からクラス削除
 
-            if(json[i].headerImg != "") {
+            if (json[i].headerImg != "") {
                 clone_element.querySelector('.list-item img').setAttribute('src', json[i].headerImg);
             }
             clone_element.querySelector('h3').textContent = json[i].title;
@@ -20,4 +20,6 @@ fetch(api_url)
             base_element[0].parentNode.appendChild(clone_element); //元となるHTMLの要素の後ろに複製した要素を追加
         }
 
+        // データの読み込みが完了したらローディングアニメーションを非表示に
+        hideLoadingAnimation(1);
     });

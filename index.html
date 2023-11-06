@@ -7,9 +7,11 @@
     <title>ShigeLab</title>
     <meta name="description" content="高知工科大学 情報学群 知覚認知脳情報研究室(繁桝研究室)のホームページです。">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/loading.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="js/hide_animation.js" defer></script>
     <script src="js/index_news.js" defer></script>
     <script src="js/index.js" defer></script>
     <script src="js/button_ani.js" defer></script>
@@ -49,7 +51,7 @@
                     人間の特性に合わせた最適な技術やコンテンツ開発に寄与する研究を行っています。
                 </p>
                 <button class="bgleft white" onclick="location.href='./info.html'"><span>MORE
-                    <img id="arrow-img" src="image/arrow_white.svg" class="arrow"></span>
+                        <img id="arrow-img" src="image/arrow_white.svg" class="arrow"></span>
                 </button>
             </span>
         </div>
@@ -58,6 +60,20 @@
                 <h2>お知らせ</h2>
                 <div class="line"></div>
                 <h3>NEWS</h3>
+            </div>
+            <!-- ローディングアニメーション -->
+            <div class="loading-animation index-load">
+                <div class="sk-cube-grid" id="loading-animation1">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
             </div>
             <div class="list">
                 <div class="list-item js-based">
@@ -69,7 +85,7 @@
                 </div>
             </div>
             <button class="bgleft black right" onclick="location.href='./news.html?page=0'"><span>MORE
-                <img id="arrow-img" src="image/arrow_black.svg" class="arrow"></span>
+                    <img id="arrow-img" src="image/arrow_black.svg" class="arrow"></span>
             </button>
 
         </div>
@@ -93,7 +109,7 @@
                         </p>
                     </div>
                     <button class="bgleft white form-button" onclick="location.href='./contact.html'"><span>CONTACT
-                        <img id="arrow-img" src="image/arrow_white.svg" class="arrow"></span>
+                            <img id="arrow-img" src="image/arrow_white.svg" class="arrow"></span>
                     </button>
                 </div>
 

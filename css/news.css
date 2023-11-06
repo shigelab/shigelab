@@ -161,12 +161,12 @@ div.title {
     border-radius: 2px;
     margin-left: 35px;
     margin-bottom: 65px;
-    padding: 10px;
+    padding: 8px;
 }
 
 .news-item img{
-    width: 320px;
-    height: 320px;
+    width: 310px;
+    height: 310px;
     display: flex;
     align-items: center;
     justify-content: center;
