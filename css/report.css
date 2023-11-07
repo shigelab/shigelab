@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap);
 
 * {
     margin: 0;
@@ -6,26 +7,13 @@
     overflow-x: auto;
 }
 
-html{
+html {
     font-size: 180%;
     background-color: #FCFAF9;
 }
 
-@keyframes scroll-anim{
-    0% {
-        scale: 1 1;
-      }
-    20% {
-        scale: 1 0.9;
-        translate: 0 -10px;
-    }
-    100%{
-        scale: 1 0.8;
-        translate: 0 -10px;
-    }
-}
 
-main{
+main {
     overflow-x: hidden;
 }
 
@@ -44,10 +32,6 @@ header {
     color: #333333;
     align-items: center;
     justify-content: space-between;
-    /* animation: scroll-anim linear;
-    animation-timeline: scroll(); */
-    animation: bounce; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: inherit; /* don't forget to set a duration! */
 }
 
 header .headline {
@@ -64,7 +48,7 @@ header .headline {
     letter-spacing: 0.05rem;
 }
 
-.nav-item a{
+.nav-item a {
     color: inherit;
     text-decoration: none;
 }
@@ -73,13 +57,13 @@ div.page {
     background-color: #FCFAF9;
     width: 100%;
     height: auto;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 300;
     font-style: normal;
     /* background-color: red;*/
 }
 
-div.normal{
+div.normal {
     margin: 0 12vw auto 12vw;
 }
 
@@ -138,8 +122,8 @@ div.title {
     letter-spacing: 0.1rem;
 }
 
-p{
-    font-family: 'Noto Sans JP', sans-serif;
+p {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 200;
     font-style: normal;
     font-size: 0.62rem;
@@ -147,7 +131,7 @@ p{
     /* min-height: 80vh; */
 }
 
-.end{
+.end {
     width: 920px;
     margin-top: 2rem;
 }
@@ -210,25 +194,26 @@ button.black:hover span {
 .bgright:before {
     content: '';
     /*絶対配置で位置を指定*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
     /*色や形状*/
-  background:  #333;/*背景色*/
-  width: 100%;
-  height: 100%;
+    background: #333;
+    /*背景色*/
+    width: 100%;
+    height: 100%;
     /*アニメーション*/
-  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
-  transform: scale(0, 1);
-  transform-origin: left top;
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: left top;
 }
 
-.white:before{
+.white:before {
     background: #FCFAF9;
 }
 
-.black:before{
+.black:before {
     background: #333333;
 }
 
@@ -240,8 +225,8 @@ button.black:hover span {
 
 /*hoverした際の形状*/
 .bgright:hover:before {
-    transform-origin:right top;
-    transform:scale(1, 1);
+    transform-origin: right top;
+    transform: scale(1, 1);
 }
 
 button .arrow {
@@ -256,46 +241,46 @@ button.center {
     margin: 16vh auto 18vh auto;
 }
 
-.btns{
+.btns {
     display: flex;
     justify-content: space-between;
     width: 920px;
     margin: 120px 0 40px;
 }
 
-.prev{
+.prev {
     text-align: right;
     padding-right: 12px;
 }
 
-.prev img.arrow{
+.prev img.arrow {
     transform: rotate(180deg);
     float: left;
 }
 
-.next{
+.next {
     text-align: left;
     margin-right: 0;
     margin-left: auto;
 }
 
-.next img.arrow{
+.next img.arrow {
     margin-left: 10px;
     float: right;
 }
 
-.back-heart{
+.back-heart {
     width: 45vw;
     height: auto;
     position: absolute;
     right: -120px;
-    bottom: -80px;    
+    bottom: -80px;
 }
 
 
 
 
-footer{
+footer {
     font-size: 0.45rem;
     font-family: Andale Mono;
     letter-spacing: 0.1rem;

@@ -39,7 +39,7 @@ fetch(api_url)
         }
 
         // データの読み込みが完了したらローディングアニメーションを非表示に
-        hideLoadingAnimation();
+        hideLoadingAnimation(1);
     });
 
 

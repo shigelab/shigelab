@@ -3,7 +3,6 @@ gsap.fromTo(".explain",
         //アニメーション前の記入
         y: 20,
         autoAlpha: 0, //アニメーション開始前の状態
-        markers: true,
     },
     {
         scrollTrigger: ".explain",

@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap);
 
 * {
     margin: 0;
@@ -6,26 +7,12 @@
     overflow-x: auto;
 }
 
-html{
+html {
     font-size: 180%;
     background-color: #FCFAF9;
 }
 
-@keyframes scroll-anim{
-    0% {
-        scale: 1 1;
-      }
-    20% {
-        scale: 1 0.9;
-        translate: 0 -10px;
-    }
-    100%{
-        scale: 1 0.8;
-        translate: 0 -10px;
-    }
-}
-
-main{
+main {
     overflow-x: hidden;
 }
 
@@ -44,10 +31,6 @@ header {
     color: #333333;
     align-items: center;
     justify-content: space-between;
-    /* animation: scroll-anim linear;
-    animation-timeline: scroll(); */
-    animation: bounce; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: inherit; /* don't forget to set a duration! */
 }
 
 header .headline {
@@ -64,7 +47,7 @@ header .headline {
     letter-spacing: 0.05rem;
 }
 
-.nav-item a{
+.nav-item a {
     color: inherit;
     text-decoration: none;
 }
@@ -73,13 +56,13 @@ div.page {
     background-color: #FCFAF9;
     width: 100%;
     height: 100%;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 300;
     font-style: normal;
     /* background-color: red;*/
 }
 
-.normal{
+.normal {
     margin: 6vh 12vw auto 12vw;
 }
 
@@ -137,7 +120,7 @@ div.title {
     letter-spacing: 0.1rem;
 }
 
-.news-list{
+.news-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -145,16 +128,16 @@ div.title {
     width: auto;
 }
 
-.news-list a{
+.news-list a {
     color: inherit;
     text-decoration: none;
 }
 
-.js-based{
+.js-based {
     display: none;
 }
 
-.news-item{
+.news-item {
     border-color: #333333;
     border-style: solid;
     border-width: 1.8px;
@@ -164,7 +147,7 @@ div.title {
     padding: 8px;
 }
 
-.news-item img{
+.news-item img {
     width: 310px;
     height: 310px;
     display: flex;
@@ -173,25 +156,25 @@ div.title {
     margin: 5px auto;
 }
 
-.news-item h5{
+.news-item h5 {
     color: #989796;
     font-family: Andale Mono;
     font-size: 0.45rem;
     margin-left: 15px;
 }
 
-.news-item h3{
+.news-item h3 {
     color: #333333;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 200;
     font-size: 0.8rem;
     margin-left: 15px;
     height: 1.8rem;
 }
 
-.news-item p{
+.news-item p {
     color: #333333;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 200;
     font-size: 0.62rem;
     margin: 5px auto 0 15px;
@@ -199,7 +182,7 @@ div.title {
     width: 90%;
 }
 
-.page-list{
+.page-list {
     width: 50%;
     height: fit-content;
     display: flex;
@@ -208,7 +191,7 @@ div.title {
     margin: 0 auto;
 }
 
-.page-number{
+.page-number {
     margin: 20px auto 60px;
     /* border-radius: 2px;
     border-width: 1.8px; */
@@ -221,7 +204,7 @@ div.title {
 }
 
 
-footer{
+footer {
     font-size: 0.45rem;
     font-family: Andale Mono;
     letter-spacing: 0.1rem;
