@@ -9,9 +9,52 @@ gsap.fromTo(
         autoAlpha: 1, // アニメーション後に出現(透過率0)
         scrollTrigger: {
             trigger: ".subtitle", // アニメーションが始まるトリガーとなる要素
-            // toggleActions: "play none none reverse", // 上スクロールで戻る
+            toggleActions: "play none none reverse", // 上スクロールで戻る
             start: "top center", // アニメーションの開始位置
             // markers: true, // マーカー表示
         },
+    }
+);
+
+gsap.fromTo(
+    ".header-anime",
+    {
+        y: -100,
+        autoAlpha: 0
+    },
+    {
+        y: 0,
+        autoAlpha: 1,
+        duration: 2,
+    }
+)
+
+gsap.to(
+    ".header-anime",
+    {
+        scrollTrigger: {
+            trigger: ".gray-back",
+            start: "top center",
+            end: "center center",
+            // markers: true,
+            scrub: true
+        },
+        css: {
+            color: "#FCFAF9"
+        }
+    },
+);
+gsap.to(
+    ".header-anime",
+    {
+        scrollTrigger: {
+            trigger: ".white-back",
+            start: "top center",
+            end: "bottom center",
+            scrub: true
+        },
+        css: {
+            color: "#333333"
+        }
     }
 );

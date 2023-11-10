@@ -7,11 +7,14 @@
     <title>Infomation</title>
     <meta name="description" content="高知工科大学 情報学群 知覚認知脳情報研究室(繁桝研究室)の研究内容です。">
     <link rel="stylesheet" type="text/css" href="css/info.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="js/button_ani.js" defer></script>
 </head>
 
 <body>
-    <header class="animate__animated animate__slideInDown">
+    <header class="header-anime">
         <h1 class="headline"> SHIGEMASU LAB </h1>
         <ul class="navi">
             <li class="nav-item"><a href="index.html">HOME</a></li>
@@ -23,13 +26,13 @@
     </header>
 
     <main>
-        <div class="page first">
+        <div class="page first white-back">
             <img class="background" src="image/box4.png">
             <div class="first-text">
                 <div class="title">
                     <h2>知覚認知脳情報研究室</h2>
                     <div class="line"></div>
-                    <h3>Laboratory for Perceptual and Cognitive Brain Informatics</h3>
+                    <h3>Perceptual and Cognitive Brain Information Processing Laboratory</h3>
                 </div>
                 <h5>立体知覚の秘密を解き明かす</h5>
                 <p>
@@ -50,7 +53,7 @@
             <img class="vr-glasses" src="image/vr-glasses.png">
         </div>
         <div class="page">
-            <div class="subtitle normal">
+            <div class="subtitle normal white-back">
                 <h2>研究内容</h2>
                 <div class="line"></div>
                 <h3>RESEARCH</h3>
@@ -120,7 +123,7 @@
             <span>過去の研究テーマ
             <img id="arrow-img" src="image/arrow_black.svg" class="arrow"></span>
         </button>
-        <div class="end-page">
+        <div class="end-page gray-back">
             <div class="subtitle white eqp-title">
                 <h2>研究設備</h2>
                 <div class="white-line"></div>
@@ -162,6 +165,7 @@
     <footer>
         &copy;2023 SHIGEMASU LAB
     </footer>
+    <script src="js/animation.js" defer></script>
 
 </body>
 

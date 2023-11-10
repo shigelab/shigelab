@@ -12,27 +12,29 @@ fetch(api_url)
     .then(function (json) {
         var flg = false;
         for (var i = 0; i < json.length; i++) {
-            if(json[i].id == id){
+            if (json[i].id == id) {
                 document.getElementById('title').innerText = json[i].title;
                 document.getElementById('date').innerText = json[i].date;
                 document.getElementById('p').innerHTML = json[i].p;
-                if(number > 0) {
-                    var prev_element = `<button class="bgright black prev" onclick="location.href='report.html?id=${json[i-1].id}&number=${i-1}'"><span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">PREV</span></button>`;
+                if (number > 0) {
+                    var prev_element = `<button class="bgright black prev" onclick="location.href='report.html?id=${json[i - 1].id}&number=${i - 1}'"><span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">PREV</span></button>`;
                     document.getElementById('btns').innerHTML += prev_element;
                 }
-                if(number < json.length-1) {
-                    var back_element = `<button class="bgleft black next" onclick="location.href='report.html?id=${json[i+1].id}&number=${i+1}'"><span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">NEXT</span></button>`;
+                if (number < json.length - 1) {
+                    var back_element = `<button class="bgleft black next" onclick="location.href='report.html?id=${json[i + 1].id}&number=${i + 1}'"><span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">NEXT</span></button>`;
                     document.getElementById('btns').innerHTML += back_element;
                 }
                 flg = true;
                 break;
             }
         }
-        if(!flg) {
+        if (!flg) {
             document.getElementById('p').innerText = 'このページは存在しません';
             document.getElementById('btns').innerHTML = `<button class="bgright black prev center" onclick="location.href='./news.html'"><span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">BACK</span></button>`;
         }
         button_ani();
+        // データの読み込みが完了したらローディングアニメーションを非表示に
+        hideLoadingAnimation(1);
     });
 
 function getParam(name, url) {

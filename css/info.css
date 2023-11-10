@@ -28,7 +28,7 @@ header {
     max-width: 100%;
     padding: 15px 2.5vw;
     margin: 0 auto;
-    background-color: #FCFAF9;
+    /* background-color: #FCFAF9; */
     color: #333333;
     align-items: center;
     justify-content: space-between;
@@ -122,7 +122,7 @@ div.first {
 
 div.title {
     position: relative;
-    width: 920px;
+    width: 940px;
 }
 
 .title h2 {
@@ -164,11 +164,11 @@ div.title {
 
 .title h3 {
     font-family: Andale Mono;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-style: normal;
     font-weight: lighter;
     margin: 0.5rem 0 0 0;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.07rem;
 }
 
 .first-text h5 {
@@ -182,7 +182,7 @@ div.title {
 .first-text p {
     padding-bottom: 1.2rem;
     width: 760px;
-    font-size: 0.64rem;
+    font-size: 0.66rem;
     font-weight: 200;
     line-height: 2;
     letter-spacing: 0.05rem;

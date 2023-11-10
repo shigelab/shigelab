@@ -8,19 +8,17 @@
     <meta name="description" content="高知工科大学 情報学群 知覚認知脳情報研究室(繁桝研究室)のホームページです。">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="js/hide_animation.js" defer></script>
     <script src="js/index_news.js" defer></script>
     <script src="js/index.js" defer></script>
     <script src="js/button_ani.js" defer></script>
-    <script src="js/gsap_index.js" defer></script>
-    <script src="js/animation.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 
 <body>
-    <header class="animate__animated animate__slideInDown">
+    <header class="header-anime">
         <h1 class="headline"> SHIGEMASU LAB </h1>
         <ul class="navi">
             <li class="nav-item"><a href="index.html">HOME</a></li>
@@ -39,9 +37,9 @@
             <img class="gif-logo" src="image/shigelab_logo2_2.gif">
             <img class="logo" src="image/shigelab_logo2_2.png">
         </div>
-        <div class="explain page">
+        <div class="explain page gray-back">
             <img class="background" src="image/vr_background.png">
-            <span class="explain_text">
+            <span class="explain-text">
                 <h3>バーチャルリアリティが照らす3次元知覚と脳内処理の謎</h3>
                 <h5>知覚認知脳情報研究室</h5>
                 <p>私たちは、人間の知覚と認知の脳内処理を実験心理学手法や脳機能イメージング法で研究しています。<br>
@@ -54,19 +52,21 @@
                         <img id="arrow-img" src="image/arrow_white.svg" class="arrow"></span>
                 </button>
             </span>
-            <div class="gradation01">
-                <div class="item item-01">
-                    <div class="round round-01"></div>
-                </div>
-                <div class="item item-02">
-                    <div class="round round-02"></div>
-                </div>
-                <div class="item item-03">
-                    <div class="round round-03"></div>
-                </div>
+
+        </div>
+        <div class="gradation01">
+            <div class="item item-01">
+                <div class="round round-01"></div>
+            </div>
+            <div class="item item-02">
+                <div class="round round-02"></div>
+            </div>
+            <div class="item item-03">
+                <div class="round round-03"></div>
             </div>
         </div>
-        <div class="page normal">
+
+        <div class="page normal white-back">
             <div class="subtitle leftAnime">
                 <h2>お知らせ</h2>
                 <div class="line"></div>
@@ -74,16 +74,19 @@
             </div>
             <!-- ローディングアニメーション -->
             <div class="loading-animation index-load">
-                <div class="sk-cube-grid" id="loading-animation1">
-                    <div class="sk-cube sk-cube1"></div>
-                    <div class="sk-cube sk-cube2"></div>
-                    <div class="sk-cube sk-cube3"></div>
-                    <div class="sk-cube sk-cube4"></div>
-                    <div class="sk-cube sk-cube5"></div>
-                    <div class="sk-cube sk-cube6"></div>
-                    <div class="sk-cube sk-cube7"></div>
-                    <div class="sk-cube sk-cube8"></div>
-                    <div class="sk-cube sk-cube9"></div>
+                <div class="sk-fading-circle" id="loading-animation1">
+                    <div class="sk-circle1 sk-circle"></div>
+                    <div class="sk-circle2 sk-circle"></div>
+                    <div class="sk-circle3 sk-circle"></div>
+                    <div class="sk-circle4 sk-circle"></div>
+                    <div class="sk-circle5 sk-circle"></div>
+                    <div class="sk-circle6 sk-circle"></div>
+                    <div class="sk-circle7 sk-circle"></div>
+                    <div class="sk-circle8 sk-circle"></div>
+                    <div class="sk-circle9 sk-circle"></div>
+                    <div class="sk-circle10 sk-circle"></div>
+                    <div class="sk-circle11 sk-circle"></div>
+                    <div class="sk-circle12 sk-circle"></div>
                 </div>
             </div>
             <div class="list">
@@ -95,17 +98,20 @@
                     </a>
                 </div>
             </div>
-            <button class="bgleft black right" onclick="location.href='./news.html?page=0'"><span>MORE
+            <button class="bgleft black right list-button" onclick="location.href='./news.html?page=0'"><span>MORE
                     <img id="arrow-img" src="image/arrow_black.svg" class="arrow"></span>
             </button>
 
         </div>
         <div class="end-page">
-            <img src="image/shigelab_logo3.png" class="bottom_logo">
+            <h3>About Us</h3>
+            <!-- <img src="image/shigelab_logo3.png" class="bottom_logo"> -->
             <div class="link-access">
                 <div class="text-box">
+                    <h4 class="end-title-j">高知工科大学 知覚認知脳情報研究室</h4>
+                    <h5 class="end-title-e">Perceptual and Cognitive Brain Information Processing Lab</h5>
+                    <p class="access">〒782-8502 高知県香美市土佐山田町宮ノ口185 高知工科大学A棟3階 A306</p>
                     <div class="link-box end">
-                        <h5>LINK</h5>
                         <p> - <a href="https://www.kochi-tech.ac.jp/">高知工科大学</a><br>
                             - <a href="http://www.info.kochi-tech.ac.jp/">高知工科大学 情報学群</a><br>
                             - <a href="https://www.kochi-tech.ac.jp/profile/ja/shigemasu-hiroaki.html">高知工科大学
@@ -113,13 +119,7 @@
                             - <a href="https://twitter.com/shigelab_a306">X(Twitter)</a>
                         </p>
                     </div>
-                    <div class="access-box end">
-                        <h5>ACCESS</h5>
-                        <p>
-                            - 高知工科大学A棟3階 A306
-                        </p>
-                    </div>
-                    <button class="bgleft white form-button" onclick="location.href='./contact.html'"><span>CONTACT
+                    <button class="bgleft white2 form-button" onclick="location.href='./contact.html'"><span>CONTACT
                             <img id="arrow-img" src="image/arrow_white.svg" class="arrow"></span>
                     </button>
                 </div>
@@ -135,6 +135,8 @@
     <footer>
         &copy;2023 SHIGEMASU LAB
     </footer>
+    <script src="js/gsap_index.js" defer></script>
+    <script src="js/animation.js" defer></script>
 
 </body>
 
