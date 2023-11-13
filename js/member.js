@@ -59,6 +59,23 @@ fetch(api_url)
         hideLoadingAnimation(1);
         hideLoadingAnimation(2);
         hideLoadingAnimation(3);
+
+        // GSAPのアニメーションを実行
+        gsap.fromTo('.member-item', {
+            opacity: 0, // 初期不透明度（非表示）
+        }, {
+            scrollTrigger: {
+                trigger: ".member-list",
+                start: "top center",
+                endTrigger: ".member-list",
+                end: "bottom center",
+                // markers: true,
+                toggleActions: 'play none none reverse',
+            },
+            opacity: 1, // 最終不透明度
+            duration: .2, // アニメーションの時間
+            stagger: 0.2, // 要素ごとの適切な遅延を設定
+        });
     });
 
 
@@ -91,3 +108,48 @@ function generateProfile(json) {
 
     return `${grade_name}\n出身: ${json.hometown}\n好きなもの: ${json.hobby}\nモットー: ${json.motto}`;
 }
+
+
+
+gsap.utils.toArray(".subtitle").forEach((target) => {
+    gsap.fromTo(
+        target, // アニメーションさせる要素
+        {
+            x: -300, // アニメーション開始前の横位置(右に100px)
+            autoAlpha: 0, // アニメーション開始前は透明
+        },
+        {
+            x: 0, // アニメーション後の横位置(左に100px)
+            autoAlpha: 1, // アニメーション後に出現(透過率0)
+            scrollTrigger: {
+                trigger: target, // アニメーションが始まるトリガーとなる要素
+                toggleActions: "play none none reverse", // 上スクロールで戻る
+                start: "top bottom", // アニメーションの開始位置
+                // markers: true, // マーカー表示
+            },
+        });
+});
+
+gsap.fromTo(
+    ".header-anime",
+    {
+        y: -100,
+        autoAlpha: 0
+    },
+    {
+        y: 0,
+        autoAlpha: 1,
+        duration: 2,
+    }
+)
+
+gsap.fromTo(
+    ".PI",
+    {
+        autoAlpha: 0
+    },
+    {
+        autoAlpha: 1,
+        duration: 2,
+    }
+)

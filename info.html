@@ -7,9 +7,11 @@
     <title>Infomation</title>
     <meta name="description" content="高知工科大学 情報学群 知覚認知脳情報研究室(繁桝研究室)の研究内容です。">
     <link rel="stylesheet" type="text/css" href="css/info.css">
+    <link rel="stylesheet" type="text/css" href="css/loading.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="js/hide_animation.js" defer></script>
     <script src="js/button_ani.js" defer></script>
 </head>
 
@@ -35,15 +37,15 @@
                     <h3>Perceptual and Cognitive Brain Information Processing Laboratory</h3>
                 </div>
                 <h5>立体知覚の秘密を解き明かす</h5>
-                <p>
+                <p class="first1">
                     私たちは感覚器を通じて外界や自己身体の入力情報を受け、脳内の複雑な情報処理を経た上で適切な行動を出力し、実世界の環境の中で適応的に生活しています。
                     知覚認知脳情報研究室では、このような人間の知覚や認知の脳情報処理過程を実験心理学的手法及び脳機能イメージング法により明らかにする研究を行なっています。
                 </p>
-                <p>
+                <p class="first2">
                     本研究室の主要な研究の一つは、3次元の実世界の空間をどのように知覚し、運動の出力に至るのか、その処理プロセスを解明することです。
                     他にも、視覚、触覚、聴覚などの複数の感覚情報との相互作用、知覚入力と運動出力の協応など、研究対象は多岐にわたります。
                 </p>
-                <p>
+                <p class="first3">
                     多感覚の統合過程の検討には、バーチャルリアリティ（VR）の技術も用いて実験を行っています。
                     こうした研究を通じて、VRなどの新しい技術に対して人間の特性に合わせた最適な呈示手法や効果的なコンテンツの呈示手法の開発につなげることが期待できます。
                 </p>
@@ -58,9 +60,9 @@
                 <div class="line"></div>
                 <h3>RESEARCH</h3>
             </div>
-            <div class="exp">
-                <h5>3次元空間の知覚、立体視の研究</h5>
+            <div class="exp ani">
                 <div class="exp-text">
+                    <h5>3次元空間の知覚、立体視の研究</h5>
                     <p>
                         私たちの目に映る像は網膜に投影された2次元の像ですが、目の前に見えているのは3次元の奥行きのある世界です。
                         網膜に映った像がどのように3次元の世界へと変換され、実際の知覚に至るのか、その処理メカニズムを実験的に明らかにすることがこの研究の目的です。
@@ -76,9 +78,9 @@
                 <img class="exp-img" src="image/dinosaur3.png">
             </div>
             <img class="eye" src="image/eye.png">
-            <div class="exp">
-                <h5>fMRIによる知覚の脳内処理過程の解明</h5>
+            <div class="exp ani">
                 <div class="exp-text">
+                    <h5>fMRIによる知覚の脳内処理過程の解明</h5>
                     <p>
                         MRI装置を使って、3次元の情報を知覚しているときの脳活動を計測し、脳内の処理メカニズムを明らかにする研究も行なっています。
                     </p>
@@ -94,9 +96,9 @@
                 <img class="exp-img" src="image/mri.png">
                 <img class="brain-bt" src="image/brain_bt.png">
             </div>
-            <div class="exp-end">
-                <h5>VR環境下での自己身体や認知・行動の研究</h5>
+            <div class="exp-end ani">
                 <div class="exp-text">
+                    <h5>VR環境下での自己身体や認知・行動の研究</h5>
                     <p>
                         VR技術の進化によって実現される3D環境や拡張現実（AR）、複合現実（MR）の普及が期待されています。
                         私たちは、人々がこれらの新しい環境にどの程度適応できるかに焦点を当てて調査しています。
@@ -114,14 +116,16 @@
                         この仮説を検証するため、VR用の歩行デバイスを使用して歩行動作を再現し、酔いの程度を比較する研究を行っています。
                     </p>
                 </div>
-                <img class="exp-img vr1" src="image/vr1.png">
-                <img class="exp-img" src="image/vr2.png">
+                <div class="end-img">
+                    <img class="exp-img vr1" src="image/vr1.png">
+                    <img class="exp-img vr2" src="image/vr2.png">
+                </div>
                 <img class="man" src="image/man.png">
             </div>
         </div>
         <button class="bgleft black form-button center" onclick="location.href='./archive.html'">
             <span>過去の研究テーマ
-            <img id="arrow-img" src="image/arrow_black.svg" class="arrow"></span>
+                <img id="arrow-img" src="image/arrow_black.svg" class="arrow"></span>
         </button>
         <div class="end-page gray-back">
             <div class="subtitle white eqp-title">
@@ -130,6 +134,23 @@
                 <h3>EQUIPMENT</h3>
             </div>
             <div class="equipment">
+                <!-- ローディングアニメーション -->
+                <div class="loading-animation">
+                    <div class="sk-fading-circle" id="loading-animation1">
+                        <div class="sk-circle1 sk-circle"></div>
+                        <div class="sk-circle2 sk-circle"></div>
+                        <div class="sk-circle3 sk-circle"></div>
+                        <div class="sk-circle4 sk-circle"></div>
+                        <div class="sk-circle5 sk-circle"></div>
+                        <div class="sk-circle6 sk-circle"></div>
+                        <div class="sk-circle7 sk-circle"></div>
+                        <div class="sk-circle8 sk-circle"></div>
+                        <div class="sk-circle9 sk-circle"></div>
+                        <div class="sk-circle10 sk-circle"></div>
+                        <div class="sk-circle11 sk-circle"></div>
+                        <div class="sk-circle12 sk-circle"></div>
+                    </div>
+                </div>
                 <div class="equipment-list">
                     <div class="equipment-item js-based">
                         <img src="image/vr_eqp.png">
@@ -158,7 +179,7 @@
                 </div>
             </div>
             <script src="js/equipment.js"></script>
-            
+
         </div>
     </main>
 
@@ -166,6 +187,8 @@
         &copy;2023 SHIGEMASU LAB
     </footer>
     <script src="js/animation.js" defer></script>
+    <script src="js/info_ani.js" defer></script>
+    <script src="js/title_ani.js" defer></script>
 
 </body>
 

@@ -42,6 +42,8 @@ fetch(api_url)
                 if (event.target === popup) {
                     popup.style.display = 'none';
                 }
-              });
+            });
         }
+        // データの読み込みが完了したらローディングアニメーションを非表示に
+        hideLoadingAnimation(1);
     });

@@ -31,7 +31,7 @@ fetch(api_url)
             clone_element.querySelector('h3').textContent = json[i].title;
             clone_element.querySelector('p').innerText = omittedContent(json[i].headerText);
             clone_element.querySelector('a').href = `report.html?id=${json[i].id}&number=${i}`;
-            if(json[i].headerImg != "") {
+            if (json[i].headerImg != "") {
                 clone_element.querySelector('img').setAttribute('src', json[i].headerImg);
             }
 
@@ -40,13 +40,30 @@ fetch(api_url)
 
         // データの読み込みが完了したらローディングアニメーションを非表示に
         hideLoadingAnimation(1);
+
+        // GSAPのアニメーションを実行
+        gsap.fromTo('.news-item', {
+            opacity: 0, // 初期不透明度（非表示）
+        }, {
+            scrollTrigger: {
+                trigger: ".news-list",
+                start: "top center",
+                endTrigger: ".page-list",
+                end: "bottom center",
+                // markers: true,
+                toggleActions: 'play none none reverse',
+            },
+            opacity: 1, // 最終不透明度
+            duration: 0.4, // アニメーションの時間
+            stagger: 0.5, // 要素ごとの適切な遅延を設定
+        });
     });
 
 
 // 引数でcontent.textContentを受け取る。
 function omittedContent(string) {
     // 定数で宣言
-    const MAX_LENGTH = 20;
+    const MAX_LENGTH = 30;
 
     // もしstringの文字数がMAX_LENGTH（今回は10）より大きかったら末尾に...を付け足して返す。
     if (string.length > MAX_LENGTH) {
@@ -67,3 +84,17 @@ function getParam(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+
+gsap.fromTo(
+    ".header-anime",
+    {
+        y: -100,
+        autoAlpha: 0
+    },
+    {
+        y: 0,
+        autoAlpha: 1,
+        duration: 2,
+    }
+)

@@ -7,6 +7,11 @@
     <title>Archive</title>
     <meta name="description" content="高知工科大学 情報学群 知覚認知脳情報研究室(繁桝研究室)の過去の研究テーマです。">
     <link rel="stylesheet" type="text/css" href="css/archive.css">
+    <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="js/hide_animation.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +25,7 @@
             <li class="nav-item"><a href="contact.html">CONTACT</a></li>
         </ul>
     </header>
-    
+
     <main>
         <div class="page">
             <div class="title">
@@ -29,10 +34,28 @@
                 <h3>Research Theme Archives</h3>
             </div>
             <div class="normal">
+                <!-- ローディングアニメーション -->
+                <div class="loading-animation">
+                    <div class="sk-fading-circle" id="loading-animation1">
+                        <div class="sk-circle1 sk-circle"></div>
+                        <div class="sk-circle2 sk-circle"></div>
+                        <div class="sk-circle3 sk-circle"></div>
+                        <div class="sk-circle4 sk-circle"></div>
+                        <div class="sk-circle5 sk-circle"></div>
+                        <div class="sk-circle6 sk-circle"></div>
+                        <div class="sk-circle7 sk-circle"></div>
+                        <div class="sk-circle8 sk-circle"></div>
+                        <div class="sk-circle9 sk-circle"></div>
+                        <div class="sk-circle10 sk-circle"></div>
+                        <div class="sk-circle11 sk-circle"></div>
+                        <div class="sk-circle12 sk-circle"></div>
+                    </div>
+                </div>
                 <ul class="theme-list">
                     <li class="theme-item js-based">
                         <input type="checkbox" id="btn1">
-                        <label class="theme-title" for="btn1">2022年度(令和4年度)_学士論文<img src="image/arrow_black.svg" class="arrow"></label>
+                        <label class="theme-title" for="btn1">2022年度(令和4年度)_学士論文<img src="image/arrow_black.svg"
+                                class="arrow"></label>
                         <ul class="item-list" id="item">
                             <div class="line"></div>
                         </ul>

@@ -459,7 +459,7 @@ div.subtitle {
 .news-title {
     width: 18vw;
     bottom: 0;
-    margin: auto auto 2.5vh auto;
+    margin: auto auto 0.4rem auto;
     font-size: 0.7rem;
     font-weight: 200;
     letter-spacing: 0.1rem;

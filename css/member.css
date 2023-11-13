@@ -263,8 +263,28 @@ div.subtitle {
     padding: 20px 20px 0 20px;
     margin-bottom: 20px;
     display: flex;
-    overflow-x: scroll;
     white-space: nowrap;
+    /* animation: loop-slide 20s infinite linear 1s both; */
+}
+
+.scroll-member {
+    overflow: scroll;
+}
+
+.scroll-member::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scroll-member::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background: #989796;
+}
+
+/* ドラックできるスクロール部の設定 */
+.scroll-member::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #2EB4D1;
 }
 
 .member-item {

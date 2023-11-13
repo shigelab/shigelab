@@ -8,11 +8,14 @@
     <meta name="description" content="高知工科大学 情報学群 知覚認知脳情報研究室(繁桝研究室)のメンバー紹介です。">
     <link rel="stylesheet" type="text/css" href="css/member.css">
     <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="js/hide_animation.js" defer></script>
 </head>
 
 <body>
-    <header class="animate__animated animate__slideInDown">
+    <header class="header-anime">
         <h1 class="headline"> SHIGEMASU LAB </h1>
         <ul class="navi">
             <li class="nav-item"><a href="index.html">HOME</a></li>
@@ -75,7 +78,7 @@
                 <div class="line"></div>
                 <h3>Doctoral & Master student</h3>
             </div>
-            <div>
+            <div class="scroll-member">
                 <!-- ローディングアニメーション -->
                 <div class="loading-animation">
                     <div class="sk-fading-circle" id="loading-animation1">
@@ -117,7 +120,7 @@
                 <div class="line"></div>
                 <h3>4th year student</h3>
             </div>
-            <div>
+            <div class="scroll-member">
                 <!-- ローディングアニメーション -->
                 <div class="loading-animation">
                     <div class="sk-fading-circle" id="loading-animation2">
@@ -159,7 +162,7 @@
                 <div class="line"></div>
                 <h3>3th year student & others</h3>
             </div>
-            <div>
+            <div class="scroll-member">
                 <!-- ローディングアニメーション -->
                 <div class="loading-animation">
                     <div class="sk-fading-circle" id="loading-animation3">
@@ -213,6 +216,7 @@
             </div>
         </div>
     </main>
+    <script src="js/title_ani.js" defer></script>
     <script src="js/member.js"></script>
 
     <footer>

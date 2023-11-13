@@ -12,7 +12,7 @@ fetch(api_url)
     .then(function (json) {
         var last_year = json[0].year + 1;
         for (var i = 0; i < json.length; i++) {
-            console.log(json[i].title);
+            // console.log(json[i].title);
             if (json[i].year === "") break;
 
             if (last_year > json[i].year) {
@@ -34,6 +34,9 @@ fetch(api_url)
         }
         checkCss('M');
         checkCss('B');
+
+        // データの読み込みが完了したらローディングアニメーションを非表示に
+        hideLoadingAnimation(1);
     });
 
 
@@ -88,7 +91,7 @@ function generateList(json, year) {
 
 function checkCss(grade) {
     for (var i = year_count; i > 0; i--) {
-        if(document.querySelector(`#btn${i + 2009}${grade}`) == null) continue;
+        if (document.querySelector(`#btn${i + 2009}${grade}`) == null) continue;
         const checkboxSelector = document.querySelector(`#btn${i + 2009}${grade}`);
         const itemSelector = document.querySelector(`#item${i + 2009}${grade}`);
         const arrowSelector = document.querySelector(`#btn${i + 2009}${grade} ~ .theme-title .arrow`);
