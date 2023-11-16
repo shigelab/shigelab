@@ -22,7 +22,7 @@ header {
     left: 0;
     width: 100vw;
     z-index: 10;
-    font-family: 'Ubuntu', sans-serif;;
+    font-family: 'Ubuntu', sans-serif;
     display: flex;
     max-width: 100%;
     padding: 15px 2.5vw;
@@ -834,7 +834,7 @@ footer {
     }
 
     div.explain {
-        height: 110vh;
+        height: 112vh;
     }
 
     .explain-text {
@@ -857,6 +857,18 @@ footer {
 
     .background {
         margin: 12vh auto auto -260px;
+    }
+
+    .round-01 {
+        filter: blur(10px);
+    }
+    
+    .round-02 {
+        filter: blur(20px);
+    }
+    
+    .round-03 {
+        filter: blur(15px);
     }
 
     button {
