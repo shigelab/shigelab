@@ -16,22 +16,22 @@ gsap.fromTo("body",
     }
 );
 
-gsap.fromTo(".explain-text",
-    {
-        //アニメーション前の記入
-        y: 40,
-    },
-    {
-        scrollTrigger: {
-            trigger: ".explain-text",
-            // markers: true,
-            start: "top center",
-            end: "bottom 25%",
-            toggleActions: 'play reverse restart reverse',
-        },
-        y: 0,
-    }
-);
+// gsap.fromTo(".explain-text",
+//     {
+//         //アニメーション前の記入
+//         y: 40,
+//     },
+//     {
+//         scrollTrigger: {
+//             trigger: ".explain-text",
+//             // markers: true,
+//             start: "top center",
+//             end: "bottom 25%",
+//             toggleActions: 'play reverse restart reverse',
+//         },
+//         y: 0,
+//     }
+// );
 
 gsap.fromTo(".explain-text h3",
     {
@@ -41,10 +41,11 @@ gsap.fromTo(".explain-text h3",
     {
         scrollTrigger: {
             trigger: ".explain-text h3",
-            start: "top center",
+            start: "top 65%",
             endTrigger: ".subtitle",
             end: "bottom center",
             toggleActions: 'play none none reverse',
+            // markers: true,
         },
         x: 0,
         autoAlpha: 1,
@@ -59,7 +60,7 @@ gsap.fromTo(".explain-text h5",
     {
         scrollTrigger: {
             trigger: ".explain-text h5",
-            start: "top center",
+            start: "top 65%",
             endTrigger: ".subtitle",
             end: "bottom center",
             toggleActions: 'play none none reverse',
@@ -78,7 +79,7 @@ gsap.fromTo(".explain-text p",
         scrollTrigger: {
             trigger: ".explain-text p",
             // markers: true,
-            start: "top 40%",
+            start: "top 65%",
             endTrigger: ".subtitle",
             end: "bottom center",
             toggleActions: 'play none none reverse',
@@ -96,7 +97,7 @@ gsap.fromTo(".explain-text button",
         scrollTrigger: {
             trigger: ".explain-text p",
             // markers: true,
-            start: "top 40%",
+            start: "top 65%",
             endTrigger: ".subtitle",
             end: "bottom center",
             toggleActions: 'play none none reverse',
@@ -130,6 +131,23 @@ gsap.set('.list-button',
         opacity: 0, // 初期不透明度（非表示）
         x: 20,
     }
+);
+
+
+gsap.to(
+    ".header-anime",
+    {
+        scrollTrigger: {
+            trigger: ".black-back",
+            start: "center 70%",
+            end: "center 70%",
+            // markers: true,
+            scrub: true
+        },
+        css: {
+            backgroundColor: "#FCFAF9"
+        }
+    },
 );
 
 

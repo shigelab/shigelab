@@ -1,25 +1,28 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
-@import url(https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap);
 
 * {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 180%;
     background-color: #FCFAF9;
     height: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 95%;
+    width: 100vw;
     z-index: 10;
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;;
     display: flex;
     max-width: 100%;
     padding: 15px 2.5vw;
@@ -34,13 +37,25 @@ header .headline {
     font-size: 1rem;
     float: left;
     letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+
+.navi {
+    display: flex;
+}
+
+.navi-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .nav-item {
     list-style: none;
     display: inline-block;
     font-size: 0.62rem;
-    padding: 0 0 0 2vw;
+    padding: 0 2vw 0 0;
     letter-spacing: 0.05rem;
 }
 
@@ -49,23 +64,63 @@ header .headline {
     text-decoration: none;
 }
 
+/* Responsive menu button */
+.responsive-btn {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
+}
+
+.menu-line1, .menu-line2, .menu-line3 {
+    background-color: #333333;
+    position: absolute;
+    width: 80%; /*線の長さ*/
+    height: 1px; /*線の太さ*/
+    left: calc(50% - 40% / 2); /*中央から長さの半分を引く*/
+    transition: .4s;
+}
+
+.menu-line1{
+    top: calc(25% - 2px / 2);
+}
+
+.menu-line2{
+    top: calc(50% - 2px / 2);
+}
+
+.menu-line3{
+    top: calc(75% - 2px / 2);
+}
+
 div.page {
     width: 100%;
     height: 110vh;
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: normal;
     font-style: normal;
+    overflow: hidden;
+    position: relative;
 }
 
 div.normal {
     background-color: rgba(0, 0, 0, 0);
-    margin: 16vh 12vw auto 12vw;
+    margin: 20vh 0 auto 12vw;
     height: 100vh;
+    width: 90vw;
+    display: block;
 }
 
 #v1, #v2, #v3 {
+    display: none;
     position: absolute;
-    top: 51%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: .7;
@@ -74,7 +129,9 @@ div.normal {
 }
 
 .gif-logo {
-    margin: 66.5vh 0 0 47px;
+    /* top: 65vh; */
+    bottom: 44px;
+    left: 47px;
     width: 430px;
     height: auto;
     position: absolute;
@@ -84,7 +141,9 @@ div.normal {
 
 .logo {
     opacity: 0;
-    margin: 71vh 0 0 60px;
+    /* top: 70vh; */
+    bottom: 60px;
+    left: 60px;
     width: 420px;
     height: auto;
     position: absolute;
@@ -153,11 +212,9 @@ div.explain {
     width: 100vw;
     /* height: 140vh;  */
     background-color: #989796;
-
 }
 
 .item {
-
     position: absolute;
     top: 180%;
     left: 25%;
@@ -252,8 +309,8 @@ div.explain {
 }
 
 button {
-    font-family: Andale Mono;
-    font-weight: normal;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
     font-style: normal;
     font-size: 0.85rem;
     background-color: transparent;
@@ -263,8 +320,8 @@ button {
     margin-top: 40px;
     padding-left: 0.6rem;
     letter-spacing: 0.1rem;
-    width: 18vw;
-    height: 10vh;
+    width: 240px;
+    height: 80px;
     text-align: left;
     /*アニメーション*/
     position: relative;
@@ -388,17 +445,23 @@ div.subtitle {
 }
 
 .subtitle h3 {
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 0.8rem;
     font-style: normal;
-    font-weight: lighter;
+    font-weight: 300;
     text-align: end;
     margin: 4px 0 0 0;
     letter-spacing: 0.1rem;
 }
 
 .list {
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    /* height: 400px; */
+    height: fit-content;
+    width: 90%;
 }
 
 .js-based {
@@ -411,14 +474,14 @@ div.subtitle {
 }
 
 .list-item {
-    width: 22vw;
-    height: 24vw;
     border-style: solid;
     border-width: 2px;
     border-radius: 3px;
     border-color: #333333;
     margin: 5vh 4vw 0 0;
-    padding: 8px;
+    padding: 8px 0.5vw;
+    height: fit-content;
+    width: fit-content;
 }
 
 .list-item img {
@@ -457,23 +520,23 @@ div.subtitle {
 }
 
 .news-title {
-    width: 18vw;
+    width: 80%;
     bottom: 0;
     margin: auto auto 0.4rem auto;
     font-size: 0.7rem;
     font-weight: 200;
     letter-spacing: 0.1rem;
+    text-align: left;
 }
 
 .list-item .line {
     margin: 0 auto;
-    width: 19vw;
+    width: 85%;
 }
 
 button.right {
-    position: absolute;
-    right: 0;
-    margin: 6vh 12.4vw 0 0;
+    margin: 6vh 12vw 0 auto;
+    display: block;
 }
 
 .end-page {
@@ -482,16 +545,19 @@ button.right {
     color: #FCFAF9;
     background-color: #333333;
     padding: 60px 80px;
+    overflow: hidden;
+    position: relative;
 }
 
-.end-page h3{
+.end-page h3 {
     font-size: 1.4rem;
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
     width: fit-content;
     letter-spacing: 0.05rem;
 }
 
-.end-title-j{
+.end-title-j {
     font-size: 0.7rem;
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 400;
@@ -501,15 +567,16 @@ button.right {
     padding: 0;
 }
 
-.end-title-e{
+.end-title-e {
     font-size: 0.64rem;
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
     width: fit-content;
     letter-spacing: 0.05rem;
     margin: 0 0 0.8rem;
 }
 
-.access{
+.access {
     font-size: 0.68rem;
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 300;
@@ -550,27 +617,438 @@ button.right {
 
 .text-box {
     width: 50vw;
+    height: auto;
     float: left;
 }
 
 .form-button {
     float: right;
     margin-top: 5px;
+    margin-right: 5px;
 }
 
 
 .map {
-    width: 32vw;
-    height: 24vw;
-    margin: 10px 80px;
+    width: 28vw;
+    height: 21vw;
+    float: right;
 }
 
 footer {
     font-size: 0.45rem;
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;;
     letter-spacing: 0.1rem;
     color: #FCFAF9;
     background-color: #333333;
     text-align: center;
     padding: 0.4rem;
+}
+
+
+@media screen and (max-width: 1080px) and (max-height: 1400px) {
+
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .responsive-btn {
+        display: flex;
+    }
+
+    .header-bg {
+        position: fixed;
+        height: fit-content;
+        width: 100vw;
+        align-items: start;
+        overflow: hidden;
+    }
+
+    .navi {
+        /* display: none; */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 40%;
+        height: fit-content;
+        background-color: #333333;
+        z-index: 10;
+        color: #FCFAF9;
+        overflow: hidden;
+    }
+
+    .navi-list {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .navi-list li {
+        margin: 0 0 40px;
+        text-align: center;
+    }
+
+    .nav-item {
+        font-size: 20px;
+    }
+
+    .menu-active {
+        display: flex;
+        height: 540px;
+        width: 100vw;
+        position: fixed;
+        overflow-y: hidden;
+    }
+
+    .close1{
+        top: calc(50% - 2px / 2); /*中央*/
+        transform: rotate(45deg); /*45度回転*/
+    }
+    .close2{
+        display: none;
+    }
+    .close3{
+        top: calc(50% - 2px / 2); /*中央*/
+        transform: rotate(-45deg); /*45度回転*/
+    }
+
+    #v1, #v2, #v3 {
+        scale: 2;
+        top: 60%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+
+    div.page {
+        height: 100vh;
+    }
+
+    div.explain {
+        height: 90vh;
+    }
+
+    .explain-text {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .explain-text h3 {
+        font-size: 1.6rem;
+        width: 24rem;
+    }
+
+    button {
+        width: 240px;
+        height: 80px;
+    }
+
+    .background {
+        margin: 35vh -95px auto auto;
+    }
+
+    .item {
+        top: 150%;
+        /* left: 25%; */
+    }
+
+    div.normal {
+        height: 105vh;
+    }
+
+    .list {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: fit-content;
+        width: 90%;
+    }
+
+    .text-box {
+        width: 79vw;
+    }
+
+    .map {
+        width: 80vw;
+        height: 60vw;
+        float: none;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .explain-text h3 {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .explain-text h5 {
+        font-size: 0.8rem;
+    }
+
+    .explain-text p {
+        font-size: 0.6rem;
+    }
+
+}
+
+@media screen and (max-height: 1020px) {
+    div.normal {
+        height: 105vh;
+    }
+
+    div.explain {
+        height: 120vh;
+    }
+
+    .list {
+        grid-template-rows: 1fr;
+        height: fit-content;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    /* 480px以下に適用されるCSS（スマホ用） */
+    .navi-list li {
+        font-size: 0.48rem;
+    }
+
+    #v1, #v2, #v3 {
+        scale: 2.5;
+        top: 60%;
+        left: 120%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+
+    .gif-logo {
+        bottom: 70px;
+        left: 20px;
+        width: 320px;
+    }
+
+    .logo {
+        bottom: 80px;
+        left: 30px;
+        width: 320px;
+    }
+
+    div.explain {
+        height: 110vh;
+    }
+
+    .explain-text {
+        width: 80%;
+    }
+
+    .explain-text h3 {
+        width: 100%;
+        font-size: 0.94rem;
+    }
+
+    .explain-text h5 {
+        font-size: 0.7rem;
+    }
+
+    .explain-text p {
+        font-size: 0.52rem;
+        width: 90%;
+    }
+
+    .background {
+        margin: 12vh auto auto -260px;
+    }
+
+    button {
+        width: 180px;
+        height: 60px;
+    }
+
+    div.subtitle {
+        width: 200px;
+    }
+
+    .subtitle h2 {
+        font-size: 0.84rem;
+    }
+
+    .subtitle h3 {
+        font-size: 0.74rem;
+    }
+
+    .list {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: fit-content;
+        width: 90%;
+    }
+
+    .list-item {
+        width: 90%;
+
+    }
+
+    .list-item img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .news-title {
+        font-size: 0.5rem;
+        letter-spacing: 0.05rem;
+        line-height: 1rem;
+        /* height: 2rem; */
+    }
+
+    div.normal {
+        margin-top: 8vh;
+        height: 110vh;
+    }
+
+    .end-page {
+        padding: 50px 30px;
+    }
+
+    .text-box {
+        width: 84vw;
+    }
+
+    .end-title-j {
+        font-size: 0.62rem;
+    }
+
+    .end-title-e {
+        font-size: 0.54rem;
+    }
+
+    .access {
+        font-size: 0.48rem;
+    }
+
+    button {
+        font-size: 0.72rem;
+    }
+
+    button .arrow {
+        width: 24px;
+        height: auto;
+    }
+
+    .map {
+        margin-top: 40px;
+    }
+}
+
+
+@media screen and (max-height: 860px) and (max-width: 540px) {
+    .list {
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    header {
+        padding: 10px 2.5vw;
+    }
+    header .headline {
+        font-size: 0.8rem;
+
+    }
+
+    .responsive-btn{
+        width: 24px;
+        height: 24px;
+    }
+
+    .menu-line{
+        margin: 3px;
+    }
+
+    .text-box {
+        width: 82vw;
+    }
+
+    .end-title-j {
+        font-size: 0.56rem;
+    }
+
+    .end-title-e {
+        font-size: 0.5rem;
+    }
+
+    .access {
+        font-size: 0.44rem;
+    }
+
+    .end p {
+        font-size: 0.5rem;
+    }
+
+    button {
+        font-size: 0.62rem;
+        width: 153px;
+        height: 51px;
+    }
+
+    button .arrow {
+        width: 18px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .logo{
+        width: 220px;
+        height: auto;
+    }
+    .gif-logo{
+        width: 220px;
+        height: auto;
+    }
+
+    div.explain {
+        height: 110vh;
+    }
+
+    .explain-text {
+        width: 80%;
+    }
+
+    .explain-text h3 {
+        width: 100%;
+        font-size: 0.64rem;
+    }
+
+    .explain-text h5 {
+        font-size: 0.5rem;
+    }
+
+    .explain-text p {
+        font-size: 0.4rem;
+        width: 90%;
+    }
+
+    .background {
+        width: 643px;
+        margin: 38vh auto auto -180px;
+    }
+
+    .end-title-j {
+        font-size: 0.42rem;
+    }
+
+    .end-title-e {
+        font-size: 0.38rem;
+    }
+
+    .access {
+        font-size: 0.32rem;
+    }
+    .text-box{
+        width: 80vw;
+    }
+
+    .end p {
+        font-size: 0.4rem;
+    }
 }

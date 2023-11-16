@@ -29,32 +29,33 @@ gsap.fromTo(
     }
 )
 
-gsap.to(
-    ".header-anime",
-    {
-        scrollTrigger: {
-            trigger: ".gray-back",
-            start: "top center",
-            end: "center center",
-            // markers: true,
-            scrub: true
-        },
-        css: {
-            color: "#FCFAF9"
-        }
-    },
-);
-gsap.to(
-    ".header-anime",
-    {
-        scrollTrigger: {
-            trigger: ".white-back",
-            start: "top center",
-            end: "bottom center",
-            scrub: true
-        },
-        css: {
-            color: "#333333"
-        }
-    }
-);
+// gsap.to(
+//     ".header-anime",
+//     {
+//         scrollTrigger: {
+//             trigger: ".gray-back",
+//             start: "top 80%",
+//             end: "center center",
+//             // markers: true,
+//             scrub: true
+//         },
+//         css: {
+//             color: "#FCFAF9"
+//         }
+//     },
+// );
+
+// gsap.to(
+//     ".header-anime",
+//     {
+//         scrollTrigger: {
+//             trigger: ".white-back",
+//             start: "top center",
+//             end: "bottom center",
+//             scrub: true
+//         },
+//         css: {
+//             color: "#333333"
+//         }
+//     }
+// );
