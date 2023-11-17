@@ -106,7 +106,7 @@ header .headline {
 div.page {
     background-color: #FCFAF9;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -177,7 +177,7 @@ div.title {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    height: 1720px;
+    height: fit-content;
     width: auto;
 }
 
@@ -267,7 +267,14 @@ footer {
     padding: 0.4rem;
 }
 
-@media screen and (max-width: 1080px) and (max-height: 1400px) {
+@media screen and (max-width: 1500px) {
+    .news-item img {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (max-height: 1400px) {
 
     /* 959px以下に適用されるCSS（タブレット用） */
 
@@ -332,22 +339,28 @@ footer {
         transform: rotate(-45deg); /*45度回転*/
     }
 
-    div.page {
-        height: 100vh;
-    }
-
-    button {
-        width: 240px;
-        height: 80px;
-    }
-
     div.normal {
-        height: 105vh;
+        height: fit-content;
+        margin: 0 6vw auto 0;
     }
 
-    .news-list {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    .news-item{
+        margin-left: 6vw;
+        margin-bottom: 4vw;
+
+    }
+
+    .news-item img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .news-item h3 {
+        font-size: 0.64rem;
+    }
+
+    .news-item p {
+        font-size: 0.48rem;
     }
 }
 
@@ -360,41 +373,49 @@ footer {
         font-size: 1.2rem;
     }
 
-}
-
-@media screen and (max-height: 1020px) {
-    div.normal {
-        height: 105vh;
+    .news-list {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     }
+
 }
 
 @media screen and (max-width: 540px) {
 
     /* 480px以下に適用されるCSS（スマホ用） */
+    div.title{
+        width: 80%;
+    }
+
+    .title h2 {
+        font-size: 1rem;
+    }
+
+    .news-list {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+
+    .news-item img {
+        width: 80%;
+        height: auto;
+    }
+
+    .news-item h3 {
+        font-size: 0.72rem;
+    }
+
+    .news-item p {
+        font-size: 0.54rem;
+    }
+
     .navi-list li {
         font-size: 0.48rem;
     }
 
 
-    button {
-        width: 180px;
-        height: 60px;
-    }
-
-    div.subtitle {
-        width: 200px;
-    }
-
-    .subtitle h2 {
-        font-size: 0.84rem;
-    }
-
-    .subtitle h3 {
-        font-size: 0.74rem;
-    }
-
-
-    div.normal {
+    .normal {
         margin-top: 8vh;
         height: 110vh;
     }
@@ -430,17 +451,6 @@ footer {
 
     .menu-line{
         margin: 3px;
-    }
-
-    button {
-        font-size: 0.62rem;
-        width: 153px;
-        height: 51px;
-    }
-
-    button .arrow {
-        width: 18px;
-        height: auto;
     }
 }
 
