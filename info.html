@@ -13,22 +13,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="js/hide_animation.js" defer></script>
     <script src="js/button_ani.js" defer></script>
+    <script src="js/responsive_header.js" defer></script>
 </head>
 
 <body>
-    <header class="header-anime">
+    <header class="header-anime header-bg">
         <h1 class="headline"> SHIGEMASU LAB </h1>
-        <ul class="navi">
-            <li class="nav-item"><a href="index.html">HOME</a></li>
-            <li class="nav-item"><a href="news.html?page=0">NEWS</a></li>
-            <li class="nav-item"><a href="info.html">INFO</a></li>
-            <li class="nav-item"><a href="member.html">MEMBER</a></li>
-            <li class="nav-item"><a href="contact.html">CONTACT</a></li>
-        </ul>
+        <div class="responsive-btn">
+            <div class="menu-line1"></div>
+            <div class="menu-line2"></div>
+            <div class="menu-line3"></div>
+        </div>
+        <nav class="navi">
+            <ul class="navi-list">
+                <li class="nav-item"><a href="index.html">HOME</a></li>
+                <li class="nav-item"><a href="news.html?page=0">NEWS</a></li>
+                <li class="nav-item"><a href="info.html">INFO</a></li>
+                <li class="nav-item"><a href="member.html">MEMBER</a></li>
+                <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="page first white-back">
+        <div class="page first">
             <img class="background" src="image/box4.png">
             <div class="first-text">
                 <div class="title">
@@ -55,20 +63,20 @@
             <img class="vr-glasses" src="image/vr-glasses.png">
         </div>
         <div class="page">
-            <div class="subtitle normal white-back">
+            <div class="subtitle normal">
                 <h2>研究内容</h2>
                 <div class="line"></div>
                 <h3>RESEARCH</h3>
             </div>
             <div class="exp ani">
+                <h5>3次元空間の知覚、立体視の研究</h5>
                 <div class="exp-text">
-                    <h5>3次元空間の知覚、立体視の研究</h5>
                     <p>
                         私たちの目に映る像は網膜に投影された2次元の像ですが、目の前に見えているのは3次元の奥行きのある世界です。
                         網膜に映った像がどのように3次元の世界へと変換され、実際の知覚に至るのか、その処理メカニズムを実験的に明らかにすることがこの研究の目的です。
                     </p>
                     <p>
-                        右の写真は恐竜が凸面に見える人が多いと思いますが、実物は恐竜の形にくり抜いたスポンジ状のおもちゃです。
+                        この写真は恐竜が凸面に見える人が多いと思いますが、実物は恐竜の形にくり抜いたスポンジ状のおもちゃです。
                         このことが分かると、正しく凹面にも見えてきます。こうした錯覚からも、私たちが、目に映った像から3次元を脳内で構築していることに気づかせてくれます。
                     </p>
                     <p>
@@ -79,8 +87,8 @@
             </div>
             <img class="eye" src="image/eye.png">
             <div class="exp ani">
+                <h5>fMRIによる知覚の脳内処理過程の解明</h5>
                 <div class="exp-text">
-                    <h5>fMRIによる知覚の脳内処理過程の解明</h5>
                     <p>
                         MRI装置を使って、3次元の情報を知覚しているときの脳活動を計測し、脳内の処理メカニズムを明らかにする研究も行なっています。
                     </p>
@@ -94,11 +102,11 @@
                     </p>
                 </div>
                 <img class="exp-img" src="image/mri.png">
-                <img class="brain-bt" src="image/brain_bt.png">
             </div>
+            <img class="brain-bt" src="image/brain_bt.png">
             <div class="exp-end ani">
+                <h5>VR環境下での自己身体や認知・行動の研究</h5>
                 <div class="exp-text">
-                    <h5>VR環境下での自己身体や認知・行動の研究</h5>
                     <p>
                         VR技術の進化によって実現される3D環境や拡張現実（AR）、複合現実（MR）の普及が期待されています。
                         私たちは、人々がこれらの新しい環境にどの程度適応できるかに焦点を当てて調査しています。
@@ -117,17 +125,17 @@
                     </p>
                 </div>
                 <div class="end-img">
-                    <img class="exp-img vr1" src="image/vr1.png">
-                    <img class="exp-img vr2" src="image/vr2.png">
+                    <img class="vr1" src="image/vr1.png">
+                    <img class="vr2" src="image/vr2.png">
                 </div>
-                <img class="man" src="image/man.png">
             </div>
+            <img class="man" src="image/man.png">
         </div>
         <button class="bgleft black form-button center" onclick="location.href='./archive.html'">
             <span>過去の研究テーマ
                 <img id="arrow-img" src="image/arrow_black.svg" class="arrow"></span>
         </button>
-        <div class="end-page gray-back">
+        <div class="end-page">
             <div class="subtitle white eqp-title">
                 <h2>研究設備</h2>
                 <div class="white-line"></div>

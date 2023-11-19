@@ -419,15 +419,6 @@ footer {
         margin-top: 8vh;
         height: 110vh;
     }
-
-    button {
-        font-size: 0.72rem;
-    }
-
-    button .arrow {
-        width: 24px;
-        height: auto;
-    }
 }
 
 

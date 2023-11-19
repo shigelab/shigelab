@@ -1,16 +1,19 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
-@import url(https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap);
 
 * {
     margin: 0;
     padding: 0;
     overflow-x: auto;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 180%;
     background-color: #FCFAF9;
     text-decoration: none;
+    overflow-x: hidden;
+    position: relative;
 }
 
 main {
@@ -21,9 +24,9 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 95%;
-    z-index: 1;
-    font-family: Andale Mono;
+    width: 100vw;
+    z-index: 10;
+    font-family: 'Ubuntu', sans-serif;
     display: flex;
     max-width: 100%;
     padding: 15px 2.5vw;
@@ -38,19 +41,69 @@ header .headline {
     font-size: 1rem;
     float: left;
     letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+
+.navi {
+    display: flex;
+}
+
+.navi-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .nav-item {
     list-style: none;
     display: inline-block;
-    font-size: 0.65rem;
-    padding: 0 0 0 2vw;
+    font-size: 0.62rem;
+    padding: 0 2vw 0 0;
     letter-spacing: 0.05rem;
 }
 
 .nav-item a {
     color: inherit;
     text-decoration: none;
+}
+
+/* Responsive menu button */
+.responsive-btn {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
+}
+
+.menu-line1, .menu-line2, .menu-line3 {
+    background-color: #333333;
+    position: absolute;
+    width: 80%;
+    /*線の長さ*/
+    height: 1px;
+    /*線の太さ*/
+    left: calc(50% - 40% / 2);
+    /*中央から長さの半分を引く*/
+    transition: .4s;
+}
+
+.menu-line1 {
+    top: calc(25% - 2px / 2);
+}
+
+.menu-line2 {
+    top: calc(50% - 2px / 2);
+}
+
+.menu-line3 {
+    top: calc(75% - 2px / 2);
 }
 
 div.page {
@@ -60,7 +113,7 @@ div.page {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: normal;
     font-style: normal;
-    /* background-color: red;*/
+    overflow: hidden;
     position: relative;
 }
 
@@ -71,7 +124,7 @@ div.normal {
 
 div.first {
     overflow-y: hidden;
-    height: 160vh;
+    height: 120%;
     background-color: #E3E1E0;
 }
 
@@ -84,6 +137,7 @@ div.first {
     object-position: center; */
     display: block;
     margin: auto;
+    object-fit: none;
     z-index: 1;
 }
 
@@ -110,8 +164,6 @@ div.first {
 .first-text {
     position: absolute;
     color: #333333;
-    width: auto;
-    height: auto;
     top: 0;
     right: 0;
     bottom: 0;
@@ -119,7 +171,7 @@ div.first {
     margin: auto;
     text-align: center;
     width: fit-content;
-    height: 120vh;
+    height: fit-content;
     vertical-align: middle;
     z-index: 3;
 }
@@ -127,6 +179,7 @@ div.first {
 div.title {
     position: relative;
     width: 940px;
+    margin: 0 auto;
 }
 
 .title h2 {
@@ -167,11 +220,11 @@ div.title {
 }
 
 .title h3 {
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 0.68rem;
     font-style: normal;
     font-weight: lighter;
-    margin: 0.5rem 0 0 0;
+    margin: 0.5rem auto 0;
     letter-spacing: 0.07rem;
 }
 
@@ -180,11 +233,11 @@ div.title {
     font-weight: 300;
     letter-spacing: 0.1rem;
     margin-top: 3.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .first-text p {
-    padding-bottom: 1.2rem;
+    padding-bottom: 2.2rem;
     width: 760px;
     font-size: 0.66rem;
     font-weight: 200;
@@ -206,13 +259,14 @@ button {
     margin-top: 40px;
     padding-left: 0.6rem;
     letter-spacing: 0.1rem;
-    width: 28vw;
-    height: 10vh;
+    width: 16rem;
+    height: 3rem;
     text-align: left;
     /*アニメーション*/
     position: relative;
     overflow: hidden;
     transition: ease .2s;
+    cursor: pointer;
 }
 
 /*ボタン内spanの形状*/
@@ -303,7 +357,7 @@ div.subtitle {
 }
 
 .subtitle h3 {
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 0.8rem;
     font-style: normal;
     font-weight: lighter;
@@ -314,66 +368,88 @@ div.subtitle {
 
 .exp {
     height: fit-content;
+    width: fit-content;
     margin: 0 12vw 100px 12vw;
-    display: flex;
-    flex-wrap: nowrap;
+    position: relative;
+    overflow: hidden;
+    /* flex-wrap: nowrap; */
 }
 
 .exp h5 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-size: 0.86rem;
     font-weight: 300;
     letter-spacing: 0.1rem;
     margin-top: 2.4rem;
     margin-bottom: 1rem;
-    width: 20rem;
+    width: 100%;
 }
 
 .exp-text p {
+    font-weight: 200;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     padding-bottom: 0.8rem;
-    width: 18rem;
     font-size: 0.5rem;
     font-weight: 200;
     line-height: 2;
     letter-spacing: 0.05rem;
     text-align: left;
+    width: 100%;
 }
 
 .exp-end {
     height: fit-content;
     margin: 0 12vw 80px 12vw;
-    display: flex;
-    flex-wrap: nowrap;
+    position: relative;
+    overflow: hidden;
 }
 
 .exp-text {
-    width: fit-content;
+    width: 40vw;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
 }
 
 .exp-end h5 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-size: 0.86rem;
     font-weight: 300;
     letter-spacing: 0.1rem;
     margin-top: 2.4rem;
     margin-bottom: 1rem;
-    width: 20rem;
+    width: 100%;
 }
 
 .exp-img {
     height: auto;
-    width: 420px;
-    object-fit: contain;
+    width: 30vw;
+    object-fit: cover;
     object-position: 0 0;
-    margin: 140px auto 0 130px;
+    margin: 0 auto auto 4vw;
     clear: both;
+    display: inline-block;
+    vertical-align: middle;
     /* left: 20px; */
 }
 
 .end-img {
-    display: grid;
+    display: inline-block;
+    height: fit-content;
+    width: 40%;
+    margin: 0 auto auto 4vw;
+}
+
+.vr1, .vr2 {
+    object-fit: cover;
+    object-position: 0 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
 }
 
 .vr2 {
-    margin: 0 auto 0 130px;
+    margin-top: 10px;
 }
 
 .eye {
@@ -381,7 +457,7 @@ div.subtitle {
     height: auto;
     position: absolute;
     left: 80px;
-    top: 480px;
+    top: 22%;
     opacity: 15%;
 }
 
@@ -390,7 +466,7 @@ div.subtitle {
     height: auto;
     position: absolute;
     left: 60px;
-    top: 960px;
+    top: 42%;
     opacity: 15%;
 }
 
@@ -399,7 +475,7 @@ div.subtitle {
     height: auto;
     position: absolute;
     left: 40px;
-    bottom: 40px;
+    bottom: 100px;
     opacity: 15%;
 }
 
@@ -445,18 +521,19 @@ div.subtitle {
 }
 
 .equipment-list {
-    width: 200vw;
-    height: 400px;
+    width: 100vw;
+    height: fit-content;
     padding: 40px 20px;
     margin-bottom: 20px;
     display: flex;
     overflow-x: scroll;
     white-space: nowrap;
+    overflow-y: hidden;
 }
 
 .equipment-item {
     width: fit-content;
-    height: 320px;
+    height: fit-content;
     padding: 20px;
     margin: 18px;
     border-color: #FCFAF9;
@@ -483,16 +560,33 @@ div.subtitle {
 }
 
 .equipment-item h3 {
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: normal;
     font-style: normal;
     color: #FCFAF9;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 10px;
+    height: 1.2rem;
+}
+
+.equipment-list::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+.equipment-list::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background: #FCFAF9
+}
+
+/* ドラックできるスクロール部の設定 */
+.equipment-list::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #2EB4D1;
 }
 
 .eqp-popup {
@@ -503,6 +597,7 @@ div.subtitle {
     width: 100%;
     height: 100%;
     background-color: rgba(51, 51, 51, 0.7);
+    z-index: 10;
 }
 
 .eqp-popup .content {
@@ -512,9 +607,10 @@ div.subtitle {
     transform: translate(-50%, -50%);
     background: #FCFAF9;
     padding: 20px;
-    width: 70%;
-    height: 70%;
+    width: 70vw;
+    height: 40vw;
     overflow: hidden;
+    z-index: 10;
 }
 
 .content-frame {
@@ -524,11 +620,13 @@ div.subtitle {
     border-width: 1.8px;
     width: 100%;
     height: 100%;
+    z-index: 10;
 }
 
 .content img {
     width: 30vw;
     height: auto;
+    max-height: 35vw;
     position: absolute;
     top: 50%;
     left: 10%;
@@ -553,7 +651,7 @@ div.subtitle {
 }
 
 .eqp-pop-title h3 {
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 0.8rem;
     font-style: normal;
     font-weight: lighter;
@@ -571,7 +669,7 @@ div.subtitle {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     letter-spacing: 0.15rem;
     line-height: 1.8;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     font-weight: 200;
 }
 
@@ -579,10 +677,832 @@ div.subtitle {
 
 footer {
     font-size: 0.45rem;
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.1rem;
     color: #FCFAF9;
     background-color: #989796;
     text-align: center;
     padding: 0.4rem;
+}
+
+
+
+
+@media screen and (max-height: 1240px) {
+    .background {
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width: 1200px) and (max-height: 1400px) {
+
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .responsive-btn {
+        display: flex;
+    }
+
+    .header-bg {
+        position: fixed;
+        height: fit-content;
+        width: 100vw;
+        align-items: start;
+        overflow: hidden;
+    }
+
+    .navi {
+        /* display: none; */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 40%;
+        height: fit-content;
+        background-color: #333333;
+        z-index: 10;
+        color: #FCFAF9;
+        overflow: hidden;
+    }
+
+    .navi-list {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .navi-list li {
+        margin: 0 0 40px;
+        text-align: center;
+    }
+
+    .nav-item {
+        font-size: 20px;
+    }
+
+    .menu-active {
+        display: flex;
+        height: 540px;
+        width: 100vw;
+        position: fixed;
+        overflow-y: hidden;
+    }
+
+    .close1 {
+        top: calc(50% - 2px / 2);
+        /*中央*/
+        transform: rotate(45deg);
+        /*45度回転*/
+    }
+
+    .close2 {
+        display: none;
+    }
+
+    .close3 {
+        top: calc(50% - 2px / 2);
+        /*中央*/
+        transform: rotate(-45deg);
+        /*45度回転*/
+    }
+
+    div.normal {
+        height: fit-content;
+        margin: 120px 0 auto 12vw;
+    }
+
+    div.first {
+        height: 100%;
+    }
+
+    .background {
+        height: 100vh;
+    }
+
+    .vr-glasses {
+        width: 360px;
+        left: 50px;
+    }
+
+    .brain-human {
+        width: 360px;
+        right: 40px;
+    }
+
+    .exp-img {
+        margin: 7vh auto auto 4vw;
+    }
+
+    .vr2 {
+        margin-top: 10px;
+    }
+
+    .eye {
+        top: 20%;
+    }
+
+    .brain-bt {
+        top: 40%;
+    }
+
+    .end-img {
+        margin: 2rem auto auto 4vw;
+    }
+
+    button {
+        width: 12rem;
+        height: 2.5rem;
+    }
+
+    button.center {
+        margin-top: 6vh;
+    }
+
+    .eqp-pop-title h2 {
+        font-size: 0.9rem;
+    }
+    
+    .eqp-pop-title h3 {
+        font-size: 0.72rem;
+    }
+
+}
+
+@media screen and (max-width: 1030px) {
+    div.title {
+        width: 100%;
+    }
+
+    .title h2 {
+        font-size: 1.2rem;
+    }
+
+    .title h3 {
+        font-size: 0.48rem;
+    }
+
+    .first-text {
+        padding: 0 10vw;
+    }
+
+    .first-text h5 {
+        font-size: 0.9rem;
+    }
+
+    .first-text p {
+        font-size: 0.54rem;
+        width: 80%;
+    }
+
+    .exp {
+        width: 88vw;
+        margin: 40px 6vw 150px 6vw;
+    }
+
+    .exp-text {
+        width: 50vw;
+    }
+
+    div.normal {
+        margin-left: 6vw;
+    }
+
+    .exp-img {
+        margin: 5vh auto auto 4vw;
+    }
+
+    .eye {
+        left: 30px;
+        width: 320px;
+        top: 22%
+    }
+
+    .brain-bt {
+        left: 30px;
+        width: 320px;
+        top: 45%
+    }
+
+    .man {
+        left: 30px;
+        width: 320px;
+    }
+
+    .exp-end {
+        width: 88vw;
+        margin: 40px 6vw 150px 6vw;
+    }
+
+    .end-img {
+        width: 30%;
+    }
+
+    .eqp-pop-title h2 {
+        font-size: 0.82rem;
+    }
+    
+    .eqp-pop-title h3 {
+        font-size: 0.64rem;
+    }
+
+    .content p {
+        letter-spacing: 0.1rem;
+        line-height: 1.8;
+        font-size: 0.42rem;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .exp-img {
+        margin: 7vh auto auto 4vw;
+    }
+
+    .first-text h5 {
+        margin-top: 2.6rem;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+
+    .title h2 {
+        font-size: 0.8rem;
+    }
+
+    .title h3 {
+        font-size: 0.45rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .first-text {
+        padding: 0 15vw;
+    }
+
+    .first-text h5 {
+        margin-top: 1.6rem;
+        font-size: 0.78rem;
+    }
+
+    .exp-text {
+        display: block;
+        width: 88vw;
+    }
+
+    .exp-img {
+        display: block;
+        width: 60vw;
+        margin: 7vh auto auto;
+    }
+
+    .eye {
+        left: auto;
+        right: 6vw;
+        top: 13%;
+    }
+
+    .brain-bt {
+        left: auto;
+        right: 6vw;
+        top: 37%;
+    }
+
+    .man {
+        left: auto;
+        right: 6vw;
+        bottom: 22%;
+    }
+
+    .brain-human {
+        width: 320px;
+    }
+
+    .vr-glasses {
+        width: 320px;
+    }
+
+    .end-img {
+        display: block;
+        width: 60vw;
+        margin: 7vh auto auto;
+    }
+
+    .eqp-pop-title h2 {
+        font-size: 0.72rem;
+    }
+    
+    .eqp-pop-title h3 {
+        font-size: 0.54rem;
+    }
+
+    .content p {
+        font-size: 0.32rem;
+    }
+
+    .equipment-item img {
+        width: 270px;
+        height: 165px;
+    }
+
+    .equipment-item h3 {
+        font-size: 0.7rem;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    .background {
+        height: 110vh;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .title h2 {
+        font-size: 1.1rem;
+    }
+
+    .background {
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    /* 480px以下に適用されるCSS（スマホ用） */
+    header .headline {
+        font-size: 0.9rem;
+    }
+
+    div.title {
+        width: 90%;
+    }
+
+    .title h2 {
+        font-size: 0.74rem;
+    }
+
+    .normal {
+        margin-top: 8vh;
+        height: 110vh;
+    }
+
+    .background {
+        height: 100vh;
+    }
+
+    .first-text h5 {
+        font-size: 0.64rem;
+        margin-bottom: 1rem;
+    }
+
+    .first-text {
+        padding: 0;
+    }
+
+    .first-text p {
+        padding-bottom: 1.5rem;
+    }
+
+    .brain-human {
+        width: 280px;
+        right: 20px;
+        top: 80px;
+    }
+
+    .vr-glasses {
+        width: 280px;
+        left: 20px;
+        bottom: 40px;
+    }
+
+    div.normal {
+        margin-top: 90px;
+    }
+
+    div.subtitle {
+        width: 200px;
+    }
+
+    .subtitle h2 {
+        font-size: 0.84rem;
+    }
+
+    .subtitle h3 {
+        font-size: 0.64rem;
+    }
+
+    .exp h5 {
+        font-size: 0.61rem;
+    }
+
+    .exp p {
+        font-size: 0.42rem;
+    }
+
+    .exp-end h5 {
+        font-size: 0.61rem;
+    }
+
+    .exp-end p {
+        font-size: 0.42rem;
+    }
+
+    .eye {
+        width: 190px;
+        right: 3vw;
+        top: 12%;
+    }
+
+    .brain-bt {
+        width: 210px;
+        right: 3vw;
+        top: 27%;
+    }
+
+    .man {
+        width: 210px;
+        right: 3vw;
+    }
+
+    button {
+        width: 70%;
+        height: 2.4rem;
+        font-size: 0.64rem;
+    }
+
+    button .arrow {
+        width: 24px;
+        height: auto;
+        margin-top: 8px;
+    }
+
+    .equipment-item {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .equipment-item img {
+        width: 180px;
+        height: 110px;
+    }
+
+    .equipment-item h3 {
+        font-size: 0.5rem;
+    }
+
+    .eqp-popup .content {
+        height: fit-content;
+    }
+
+    .content img{
+        width: 80%;
+        position: relative;
+        display: block;
+        margin: 5% auto 0;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+
+    .eqp-pop-title{
+        margin: 10% auto auto;
+        width: 80%;
+    }
+
+    .eqp-pop-title h2 {
+        font-size: 0.64rem;
+    }
+    
+    .eqp-pop-title h3 {
+        font-size: 0.48rem;
+    }
+
+    .content p {
+        font-size: 0.3rem;
+        width: 80%;
+        margin: 10% auto;
+    }
+
+}
+
+@media screen and (max-width: 540px) and (max-height: 780px) {
+    .eye {
+        top: 16%;
+    }
+
+    .brain-bt {
+        top: 42%;
+    }
+
+    .man {
+        bottom: 20%;
+    }
+}
+
+@media screen and (max-height: 1100px) {
+    .background {
+        height: 110vh;
+    }
+}
+
+@media screen and (max-height: 1000px) {
+    .background {
+        height: 115vh;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .background {
+        height: 120vh;
+    }
+}
+
+@media screen and (max-height: 850px) {
+    .background {
+        height: 130vh;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .background {
+        height: 140vh;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .background {
+        height: 145vh;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .background {
+        height: 150vh;
+    }
+}
+
+@media screen and (max-height: 700px) and (max-width: 400px) {
+    .background {
+        height: 165vh;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-height: 800px) {
+    .background {
+        height: 165vh;
+    }
+
+    .first-text h5 {
+        margin-top: 2.4rem;
+        margin-bottom: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .first-text p {
+        font-size: 0.48rem;
+        padding-bottom: 1rem;
+    }
+
+    .exp h5 {
+        font-size: 0.53rem;
+    }
+
+    .exp p {
+        font-size: 0.4rem;
+    }
+
+    .exp-end h5 {
+        font-size: 0.53rem;
+    }
+
+    .exp-end p {
+        font-size: 0.4rem;
+    }
+
+    .brain-human {
+        width: 200px;
+    }
+
+    .vr-glasses {
+        width: 200px;
+    }
+
+    .eye {
+        top: 18%;
+    }
+
+    .brain-bt {
+        top: 43%;
+    }
+
+    .man {
+        bottom: 16%;
+    }
+
+    .eqp-pop-title h2 {
+        font-size: 0.5rem;
+    }
+    
+    .eqp-pop-title h3 {
+        font-size: 0.4rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header {
+        padding: 10px 2.5vw;
+    }
+
+    header .headline {
+        font-size: 0.8rem;
+
+    }
+
+    .responsive-btn {
+        width: 24px;
+        height: 24px;
+    }
+
+    .menu-line {
+        margin: 3px;
+    }
+
+    /* 480px以下に適用されるCSS（スマホ用） */
+
+    div.title {
+        width: 95%;
+        margin-top: 0;
+    }
+
+    .title h2 {
+        font-size: 0.8rem;
+    }
+
+    .title h3 {
+        width: 90%;
+        font-size: 0.38rem;
+        margin-top: 0.2rem;
+    }
+
+    .first-text h5 {
+        font-size: 0.56rem;
+    }
+
+    .first-text p {
+        font-size: 0.46rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .brain-human {
+        width: 180px;
+    }
+
+    .vr-glasses {
+        width: 180px;
+    }
+
+    .exp h5 {
+        font-size: 0.5rem;
+    }
+
+    .exp p {
+        font-size: 0.4rem;
+    }
+
+    .exp-end h5 {
+        font-size: 0.5rem;
+    }
+
+    .exp-end p {
+        font-size: 0.4rem;
+    }
+
+    .eye {
+        top: 18%;
+    }
+
+    .brain-bt {
+        top: 44%;
+    }
+
+    .man {
+        bottom: 16%;
+    }
+
+    button {
+        width: 75%;
+        height: 2rem;
+        font-size: 0.58rem;
+    }
+
+    button .arrow {
+        margin-top: 7px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    div.title {
+        width: 95%;
+        margin-top: 0;
+    }
+
+    .title h2 {
+        font-size: 0.7rem;
+    }
+
+    .title h3 {
+        width: 90%;
+        font-size: 0.3rem;
+    }
+
+    .background {
+        height: 135vh;
+    }
+
+    .first-text h5 {
+        font-size: 0.5rem;
+    }
+
+    .first-text p {
+        font-size: 0.4rem;
+        padding-bottom: 0.5rem;
+    }
+
+    div.subtitle {
+        width: 160px;
+        margin-top: 10%;
+    }
+
+    .subtitle h2 {
+        font-size: 0.74rem;
+    }
+
+    .subtitle h3 {
+        font-size: 0.64rem;
+    }
+
+    .exp, .exp-end {
+        margin: 1vw 6vw;
+    }
+
+    .exp h5 {
+        font-size: 0.44rem;
+    }
+
+    .exp p {
+        font-size: 0.34rem;
+    }
+
+    .exp-end h5 {
+        font-size: 0.44rem;
+        width: 100%;
+    }
+
+    .exp-end p {
+        font-size: 0.34rem;
+    }
+
+    .exp-img {
+        margin-top: 1vh;
+    }
+
+    .eye {
+        top: 19%;
+    }
+
+    .brain-bt {
+        top: 42%;
+    }
+
+    .man {
+        bottom: 14%;
+    }
+
+    button {
+        width: 80%;
+        font-size: 0.5rem;
+    }
+
+    button .arrow {
+        margin-top: 5px;
+    }
+
+    .eqp-pop-title h2 {
+        font-size: 0.45rem;
+    }
+    
+    .eqp-pop-title h3 {
+        font-size: 0.35rem;
+    }
+
+    .content p {
+        font-size: 0.27rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .background{
+        height: 145vh;
+    }
 }

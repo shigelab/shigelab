@@ -809,6 +809,10 @@ footer {
 @media screen and (max-width: 540px) {
 
     /* 480px以下に適用されるCSS（スマホ用） */
+    header .headline {
+        font-size: 0.9rem;
+    }
+    
     .navi-list li {
         font-size: 0.48rem;
     }
