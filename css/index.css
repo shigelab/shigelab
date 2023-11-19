@@ -76,6 +76,7 @@ header .headline {
     cursor: pointer;
     position: relative;
     z-index: 11;
+    overflow: hidden;
 }
 
 .menu-line1, .menu-line2, .menu-line3 {
@@ -812,7 +813,7 @@ footer {
     header .headline {
         font-size: 0.9rem;
     }
-    
+
     .navi-list li {
         font-size: 0.48rem;
     }

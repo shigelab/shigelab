@@ -79,6 +79,7 @@ header .headline {
     margin: 0 0 0 auto;
     cursor: pointer;
     position: relative;
+    overflow: hidden;
     z-index: 11;
 }
 
@@ -132,7 +133,7 @@ div.first {
     background-color: transparent;
     opacity: 15%;
     width: 100vw;
-    height: auto;
+    height: 40rem;
     /* object-fit: none;
     object-position: center; */
     display: block;
@@ -164,13 +165,12 @@ div.first {
 .first-text {
     position: absolute;
     color: #333333;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 2% auto 0;
     text-align: center;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     vertical-align: middle;
     z-index: 3;
@@ -238,7 +238,7 @@ div.title {
 
 .first-text p {
     padding-bottom: 2.2rem;
-    width: 760px;
+    width: 820px;
     font-size: 0.66rem;
     font-weight: 200;
     line-height: 2;
@@ -685,15 +685,6 @@ footer {
     padding: 0.4rem;
 }
 
-
-
-
-@media screen and (max-height: 1240px) {
-    .background {
-        height: 120vh;
-    }
-}
-
 @media screen and (max-width: 1200px) and (max-height: 1400px) {
 
     /* 959px以下に適用されるCSS（タブレット用） */
@@ -774,10 +765,6 @@ footer {
         height: 100%;
     }
 
-    .background {
-        height: 100vh;
-    }
-
     .vr-glasses {
         width: 360px;
         left: 50px;
@@ -842,6 +829,7 @@ footer {
 
     .first-text {
         padding: 0 10vw;
+        
     }
 
     .first-text h5 {
@@ -850,7 +838,7 @@ footer {
 
     .first-text p {
         font-size: 0.54rem;
-        width: 80%;
+        width: 100%;
     }
 
     .exp {
@@ -944,6 +932,10 @@ footer {
         font-size: 0.78rem;
     }
 
+    .first-text p {
+        width: 80%;
+    }
+
     .exp-text {
         display: block;
         width: 88vw;
@@ -1010,19 +1002,9 @@ footer {
 
 }
 
-@media screen and (max-width: 680px) {
-    .background {
-        height: 110vh;
-    }
-}
-
 @media screen and (max-width: 580px) {
     .title h2 {
         font-size: 1.1rem;
-    }
-
-    .background {
-        height: 120vh;
     }
 }
 
@@ -1046,8 +1028,8 @@ footer {
         height: 110vh;
     }
 
-    .background {
-        height: 100vh;
+    .background{
+        height: 38rem;
     }
 
     .first-text h5 {
@@ -1199,58 +1181,7 @@ footer {
     }
 }
 
-@media screen and (max-height: 1100px) {
-    .background {
-        height: 110vh;
-    }
-}
-
-@media screen and (max-height: 1000px) {
-    .background {
-        height: 115vh;
-    }
-}
-
-@media screen and (max-height: 900px) {
-    .background {
-        height: 120vh;
-    }
-}
-
-@media screen and (max-height: 850px) {
-    .background {
-        height: 130vh;
-    }
-}
-
-@media screen and (max-height: 800px) {
-    .background {
-        height: 140vh;
-    }
-}
-
-@media screen and (max-height: 750px) {
-    .background {
-        height: 145vh;
-    }
-}
-
-@media screen and (max-height: 700px) {
-    .background {
-        height: 150vh;
-    }
-}
-
-@media screen and (max-height: 700px) and (max-width: 400px) {
-    .background {
-        height: 165vh;
-    }
-}
-
 @media screen and (min-width: 1000px) and (max-height: 800px) {
-    .background {
-        height: 165vh;
-    }
 
     .first-text h5 {
         margin-top: 2.4rem;
@@ -1259,6 +1190,10 @@ footer {
 }
 
 @media screen and (max-width: 430px) {
+    .background{
+        height: 36rem;
+    }
+
     .first-text p {
         font-size: 0.48rem;
         padding-bottom: 1rem;
@@ -1345,6 +1280,10 @@ footer {
         margin-top: 0.2rem;
     }
 
+    .background{
+        height: 32rem;
+    }
+
     .first-text h5 {
         font-size: 0.56rem;
     }
@@ -1414,10 +1353,6 @@ footer {
     .title h3 {
         width: 90%;
         font-size: 0.3rem;
-    }
-
-    .background {
-        height: 135vh;
     }
 
     .first-text h5 {
@@ -1498,11 +1433,5 @@ footer {
 
     .content p {
         font-size: 0.27rem;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    .background{
-        height: 145vh;
     }
 }
