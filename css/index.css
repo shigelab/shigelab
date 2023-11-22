@@ -723,6 +723,12 @@ footer {
     button {
         width: 180px;
         height: 60px;
+        font-size: 0.72rem;
+    }
+
+    button .arrow {
+        width: 24px;
+        height: auto;
     }
 
     div.subtitle {
@@ -786,15 +792,6 @@ footer {
         font-size: 0.48rem;
     }
 
-    button {
-        font-size: 0.72rem;
-    }
-
-    button .arrow {
-        width: 24px;
-        height: auto;
-    }
-
     .map {
         margin-top: 40px;
     }
@@ -808,13 +805,6 @@ footer {
 }
 
 @media screen and (max-width: 380px) {
-    header {
-        padding: 10px 2.5vw;
-    }
-    header .headline {
-        font-size: 0.8rem;
-
-    }
 
     .responsive-btn{
         width: 24px;

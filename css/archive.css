@@ -180,7 +180,10 @@ footer {
     }
 
     .title h2 {
-        font-size: 1rem;
+        font-size: 0.9remrem;
+    }
+    .title h3 {
+        font-size: 0.5rem;
     }
 
     div.normal {
@@ -207,11 +210,11 @@ footer {
     }
 
     .title h2 {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     .title h3{
-        font-size: 0.6rem;
+        font-size: 0.42rem;
     }
 
     .item-list li {
@@ -241,7 +244,7 @@ footer {
         font-size: 0.74rem;
     }
     .title h3 {
-        font-size: 0.5rem;
+        font-size: 0.34rem;
     }
     .theme-title{
         font-size: 0.48rem;
@@ -253,6 +256,6 @@ footer {
         font-size: 0.65rem;
     }
     .title h3 {
-        font-size: 0.45rem;
+        font-size: 0.3rem;
     }
 }
