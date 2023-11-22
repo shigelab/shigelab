@@ -129,10 +129,6 @@ header .headline {
         text-align: center;
     }
 
-    .nav-item {
-        font-size: 20px;
-    }
-
     .menu-active {
         display: flex;
         height: 540px;
@@ -159,12 +155,17 @@ header .headline {
         /*45度回転*/
     }
 }
+@media screen and (max-width: 820px) {
+    header .headline {
+        font-size: 0.9rem;
+    }
+}
 
 @media screen and (max-width: 540px) {
 
     /* 480px以下に適用されるCSS（スマホ用） */
     header .headline {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .navi-list li {
@@ -178,7 +179,7 @@ header .headline {
     }
 
     header .headline {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
 
     }
 

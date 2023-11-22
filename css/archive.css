@@ -36,13 +36,13 @@ div.normal {
 div.title {
     color: #333333;
     height: auto;
-    margin: 80px auto 30px;
+    margin: 90px auto 30px;
     text-align: center;
     width: 720px;
 }
 
 .title h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 0.3rem;
     overflow: hidden;
@@ -79,7 +79,7 @@ div.title {
 }
 
 .title h3 {
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 0.7rem;
     font-style: normal;
     font-weight: lighter;
@@ -101,7 +101,7 @@ div.title {
     display: flex;
     align-items: center;
     cursor: pointer;
-
+    overflow: hidden;
 }
 
 li.theme-item img {
@@ -116,6 +116,7 @@ li.theme-item img {
 .item-list {
     display: list-item;
     font-size: 0.54rem;
+    font-weight: 400;
     letter-spacing: 0.05rem;
     margin-top: 6px;
 }
@@ -158,10 +159,100 @@ a {
 
 footer {
     font-size: 0.45rem;
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.1rem;
     color: #333333;
     background-color: #FCFAF9;
     text-align: center;
     padding: 0.4rem;
+}
+
+@media screen and (max-width: 1024px) and (max-height: 1400px) {
+    div.normal {
+        height: fit-content;
+        margin: 0 20vw auto 20vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    div.title {
+        width: 520px;
+    }
+
+    .title h2 {
+        font-size: 1rem;
+    }
+
+    div.normal {
+        height: fit-content;
+        margin: 0 16vw auto 16vw;
+    }
+
+    .theme-title{
+        font-size: 0.64rem;
+        padding: 0 18px;
+    }
+
+    li.theme-item img {
+        width: 24px;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+
+    /* 480px以下に適用されるCSS（スマホ用） */
+    div.title {
+        width: 80%;
+    }
+
+    .title h2 {
+        font-size: 0.85rem;
+    }
+
+    .title h3{
+        font-size: 0.6rem;
+    }
+
+    .item-list li {
+        padding: 8px 13px;
+    }
+
+    li.theme-item img {
+        width: 18px;
+    }
+
+    .item-list{
+        font-size: 0.4rem;
+    }
+
+    .theme-title{
+        font-size: 0.52rem;
+        padding: 0 9px;
+    }
+
+    li.theme-item {
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .title h2 {
+        font-size: 0.74rem;
+    }
+    .title h3 {
+        font-size: 0.5rem;
+    }
+    .theme-title{
+        font-size: 0.48rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .title h2 {
+        font-size: 0.65rem;
+    }
+    .title h3 {
+        font-size: 0.45rem;
+    }
 }

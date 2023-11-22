@@ -11,6 +11,8 @@
     width: 52px;
     height: 52px;
     position: relative;
+    overflow: hidden;
+
 }
 
 .sk-fading-circle .sk-circle {
@@ -18,7 +20,7 @@
     height: 100%;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0; 
 }
 
 .sk-fading-circle .sk-circle:before {

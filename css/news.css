@@ -42,11 +42,11 @@ div.title {
     height: auto;
     margin: 100px auto 80px;
     text-align: center;
-    width: 720px;
+    width: 70%;
 }
 
 .title h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.3rem;
     overflow: hidden;
@@ -226,7 +226,7 @@ footer {
     }
 
     .title h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .news-list {
@@ -244,7 +244,11 @@ footer {
     }
 
     .title h2 {
-        font-size: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .title h3{
+        font-size: 0.6rem;
     }
 
     .news-list {

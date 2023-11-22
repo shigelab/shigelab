@@ -103,7 +103,7 @@ function checkCss(grade) {
             if (checkboxSelector && checkboxSelector.checked) {
                 itemSelector.style.display = 'list-item';
                 itemSelector.style.height = 'auto';
-                itemSelector.style.padding = '0 22px';
+                itemSelector.style.padding = '0 2%';
                 arrowSelector.style.transform = 'rotate(90deg)';
             } else {
                 itemSelector.style.display = 'none';
