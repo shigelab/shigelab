@@ -1,15 +1,19 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
-@import url(https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap);
 
 * {
     margin: 0;
     padding: 0;
     overflow-x: auto;
+    box-sizing: border-box;
 }
 
-html {
+html, body {
     font-size: 180%;
     background-color: #FCFAF9;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 
@@ -24,23 +28,28 @@ div.page {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 300;
     font-style: normal;
-    /* background-color: red;*/
+    overflow: hidden;
+    position: relative;
 }
 
 div.normal {
-    margin: 0 12vw auto 12vw;
+    margin: 0 0 auto 12vw;
+}
+
+.content{
+    min-height: 65vh;
 }
 
 div.title {
     color: #333333;
     height: auto;
-    margin: 120px 0 30px;
+    margin: 10% 0 5%;
     text-align: left;
-    width: 920px;
+    width: 80%;
 }
 
 .title h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.3rem;
     overflow: hidden;
@@ -77,10 +86,10 @@ div.title {
 }
 
 .title h3 {
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 0.7rem;
     font-style: normal;
-    font-weight: lighter;
+    font-weight: 300;
     text-align: right;
     margin: 0.5rem 0 0 0;
     letter-spacing: 0.1rem;
@@ -91,18 +100,18 @@ p {
     font-weight: 200;
     font-style: normal;
     font-size: 0.62rem;
-    width: 920px;
+    width: 80%;
     /* min-height: 80vh; */
 }
 
 .end {
-    width: 920px;
+    width: 80%;
     margin-top: 2rem;
 }
 
 button {
-    font-family: Andale Mono;
-    font-weight: normal;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
     font-style: normal;
     font-size: 0.85rem;
     background-color: transparent;
@@ -208,7 +217,7 @@ button.center {
 .btns {
     display: flex;
     justify-content: space-between;
-    width: 920px;
+    width: 80%;
     margin: 120px 0 40px;
 }
 
@@ -237,19 +246,119 @@ button.center {
     width: 45vw;
     height: auto;
     position: absolute;
-    right: -120px;
-    bottom: -80px;
+    right: 0;
+    bottom: 5%;
 }
-
-
 
 
 footer {
     font-size: 0.45rem;
-    font-family: Andale Mono;
+    font-family: 'Ubuntu', sans-serif;;
     letter-spacing: 0.1rem;
     color: #333333;
     background-color: #FCFAF9;
     text-align: center;
     padding: 0.4rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .back-heart{
+        width: 50vw;
+        bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .explain-text h3 {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .explain-text h5 {
+        font-size: 0.8rem;
+    }
+
+    .explain-text p {
+        font-size: 0.6rem;
+    }
+
+    button {
+        width: 210px;
+        height: 70px;
+        font-size: 0.72rem;
+    }
+
+    div.title{
+        margin-top: 15%;
+    }
+
+    .title h2 {
+        font-size: 0.9rem;
+    }
+
+    .back-heart{
+        width: 60vw;
+        bottom: 15%;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    button {
+        width: 180px;
+        height: 60px;
+        font-size: 0.72rem;
+    }
+
+    button .arrow {
+        width: 24px;
+        height: auto;
+    }
+
+    div.title{
+        margin-top: 20%;
+    }
+
+    .title h2 {
+        font-size: 0.85rem;
+    }
+
+    .title h3{
+        font-size: 0.6rem;
+    }
+
+    .back-heart{
+        width: 70vw;
+        bottom: 20%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    button {
+        font-size: 0.62rem;
+        width: 153px;
+        height: 51px;
+    }
+
+    button .arrow {
+        width: 18px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .title h2 {
+        font-size: 0.75rem;
+    }
+
+    .title h3{
+        font-size: 0.55rem;
+    }
+
+    button {
+        padding: 4%;
+        width: fit-content;
+        height: fit-content;
+    }
 }

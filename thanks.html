@@ -6,18 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete</title>
     <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="js/button_ani.js" defer></script>
+    <script src="js/responsive_header.js" defer></script>
 </head>
 
 <body>
-    <div class="thanks">
-        <h1>送信完了</h1>
-        <h3>Message successfully sent. </h3>
-        <h5>記入いただいたメールアドレスに返信いたしますので3〜4日間ほどお待ちください。</h5>
-        <h6>Please allow 3-4 days for a reply to be sent to the e-mail address provided.</h6>
-        <button class="bgright black center back" onclick="location.href='./contact.html'">
-            <span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">BACK</span>
-        </button>
+    <header class="header-anime header-bg">
+        <h1 class="headline"> SHIGEMASU LAB </h1>
+        <div class="responsive-btn">
+            <div class="menu-line1"></div>
+            <div class="menu-line2"></div>
+            <div class="menu-line3"></div>
+        </div>
+        <nav class="navi">
+            <ul class="navi-list">
+                <li class="nav-item"><a href="index.html">HOME</a></li>
+                <li class="nav-item"><a href="news.html?page=0">NEWS</a></li>
+                <li class="nav-item"><a href="info.html">INFO</a></li>
+                <li class="nav-item"><a href="member.html">MEMBER</a></li>
+                <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page">
+        <div class="thanks">
+            <h1>送信完了</h1>
+            <h3>Message successfully sent. </h3>
+            <h5>記入いただいたメールアドレスに返信いたしますので3〜4日間ほどお待ちください。</h5>
+            <h6>Please allow 3-4 days for a reply to be sent to the e-mail address provided.</h6>
+            <button class="bgright black center back" onclick="location.href='./contact.html'">
+                <span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">BACK</span>
+            </button>
+        </div>
     </div>
 
     <footer class="thanks-footer">

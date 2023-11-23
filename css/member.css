@@ -534,6 +534,10 @@ footer {
         margin: 4%;
     }
 
+    .alumni p{
+        font-size: 0.48rem;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -553,6 +557,10 @@ footer {
         margin-bottom: 0.2rem;
     }
 
+    .alumni p{
+        font-size: 0.48rem;
+    }
+
 }
 
 @media screen and (max-width: 540px) {
@@ -560,7 +568,7 @@ footer {
     /* 480px以下に適用されるCSS（スマホ用） */
     div.title {
         width: 80%;
-        margin-top: 18%;
+        margin-top: 22%;
     }
 
     .title h2 {
@@ -580,7 +588,7 @@ footer {
     }
 
     .subtitle h2 {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
     }
 
     .subtitle h3 {
@@ -604,7 +612,7 @@ footer {
     }
 
     .pi-exp {
-        font-size: 0.48rem;
+        font-size: 0.47rem;
     }
 
     .pi-exp p {
@@ -613,6 +621,9 @@ footer {
 
     .member-title{
         margin-left: 4vw;
+    }
+    .alumni p{
+        font-size: 0.47rem;
     }
 }
 
@@ -632,6 +643,9 @@ footer {
     .pi-exp{
         font-size: 0.45rem;
     }
+    .alumni p{
+        font-size: 0.45rem;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -648,6 +662,9 @@ footer {
         font-size: 0.28rem;
     }
     .pi-exp{
+        font-size: 0.42rem;
+    }
+    .alumni p{
         font-size: 0.42rem;
     }
 }
