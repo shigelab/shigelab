@@ -475,6 +475,7 @@ footer {
         float: none;
         display: block;
         margin: 5% auto 1%;
+        top: 0;
     }
     .pi-text {
         float: none;
