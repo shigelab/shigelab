@@ -521,6 +521,7 @@ button.right {
 }
 
 .link-box a {
+    font-weight: 500;
     color: #2EB4D1;
     /* color: #FCFAF9; */
 }

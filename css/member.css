@@ -56,7 +56,7 @@ div.title {
 }
 
 .title h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.3rem;
     overflow: hidden;
@@ -177,7 +177,7 @@ div.subtitle {
     margin: 0 auto 0 4%;
     top: 50%;
     transform: translate(0, -50%);
-    width: 27%;
+    width: 25%;
     height: auto;
     float: left;
 }
@@ -226,6 +226,11 @@ div.subtitle {
 .pi-exp p {
     margin-bottom: 0.4rem;
     overflow-wrap: normal;
+}
+
+.pi-exp a {
+    font-weight: 500;
+    color: #2EB4D1;
 }
 
 .member-title {
@@ -395,7 +400,7 @@ footer {
     }
 
     .title h2 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .title h3 {
@@ -448,7 +453,7 @@ footer {
     }
 
     .title h2 {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .title h3 {
@@ -477,6 +482,7 @@ footer {
         margin: 5% auto 1%;
         top: 0;
     }
+
     .pi-text {
         float: none;
         width: 90%;
@@ -630,7 +636,7 @@ footer {
 
 @media screen and (max-width: 420px) {
     .title h2 {
-        font-size: 0.74rem;
+        font-size: 0.8rem;
     }
     .title h3 {
         font-size: 0.34rem;

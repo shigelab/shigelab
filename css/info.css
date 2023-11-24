@@ -96,7 +96,7 @@ div.title {
 }
 
 .title h2 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.15rem;
     overflow: hidden;
@@ -759,11 +759,11 @@ footer {
 @media screen and (max-width: 770px) {
 
     .title h2 {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .title h3 {
-        font-size: 0.45rem;
+        font-size: 0.5rem;
         letter-spacing: 0.05rem;
     }
 
@@ -858,11 +858,11 @@ footer {
 
 }
 
-@media screen and (max-width: 580px) {
+/* @media screen and (max-width: 580px) {
     .title h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
-}
+} */
 
 @media screen and (max-width: 540px) {
 
@@ -873,7 +873,11 @@ footer {
     }
 
     .title h2 {
-        font-size: 0.74rem;
+        font-size: 0.8rem;
+    }
+
+    .title h3{
+        font-size: 0.42rem;
     }
 
     .normal {
