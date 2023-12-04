@@ -1,0 +1,187 @@
+div.title {
+    color: #333333;
+    position: relative;
+    text-align: center;
+    height: auto;
+    width: 70%;
+    margin: 11% auto 10%;
+}
+
+.title h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    overflow: hidden;
+}
+
+.title h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: lighter;
+    margin: 0.5rem auto 0 ;
+    letter-spacing: 0.1rem;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    /* background-color: #989796; */
+    margin: 6px 0;
+    position: relative;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #989796;
+}
+
+.line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 20px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #989796;
+}
+
+div.subtitle {
+    position: relative;
+    width: 35%;
+}
+
+.subtitle h2 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 400;
+    position: relative;
+    letter-spacing: 0.15rem;
+}
+
+.subtitle h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 300;
+    text-align: end;
+    margin: 4px 0 0 0;
+    letter-spacing: 0.1rem;
+    margin-top: 0.3rem;
+}
+
+@media screen and (max-width: 900px) {
+
+    .title h2 {
+        font-size: 1.1rem;
+    }
+
+    .title h3 {
+        font-size: 0.62rem;
+    }
+
+    div.subtitle {
+        width: 45%;
+    }
+
+    .subtitle h2 {
+        font-size: 0.9rem;
+    }
+
+    .subtitle h3 {
+        font-size: 0.62rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    div.title {
+        width: 75%;
+    }
+
+    .title h2 {
+        font-size: 1rem;
+    }
+    .title h3 {
+        margin-top: 0.3rem;
+        font-size: 0.5rem;
+    }
+
+    div.subtitle {
+        width: 55%;
+    }
+
+    .subtitle h2 {
+        font-size: 0.85rem;
+    }
+
+    .subtitle h3 {
+        font-size: 0.5rem;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+
+    /* 480px以下に適用されるCSS（スマホ用） */
+    div.title {
+        width: 80%;
+        margin-top: 22%;
+    }
+
+    .title h2 {
+        font-size: 0.9rem;
+    }
+
+    .title h3{
+        font-size: 0.42rem;
+    }
+
+    div.subtitle {
+        width: 65%;
+    }
+
+    .subtitle h2 {
+        font-size: 0.84rem;
+    }
+
+    .subtitle h3 {
+        font-size: 0.62rem;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+
+    div.title {
+        width: 95%;
+    }
+
+    .title h2 {
+        font-size: 0.74rem;
+    }
+
+    .title h3 {
+        font-size: 0.38rem;
+        margin-top: 0.2rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .title h2 {
+        font-size: 0.7rem;
+    }
+
+    .title h3 {
+        font-size: 0.3rem;
+    }
+}

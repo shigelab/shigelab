@@ -33,59 +33,6 @@ div.normal {
     margin: 0 24vw auto 24vw;
 }
 
-div.title {
-    color: #333333;
-    height: auto;
-    margin: 90px auto 30px;
-    text-align: center;
-    width: 720px;
-}
-
-.title h2 {
-    font-size: 1.3rem;
-    font-weight: 400;
-    letter-spacing: 0.3rem;
-    overflow: hidden;
-}
-
-.line {
-    width: 100%;
-    height: 2px;
-    /* background-color: #989796; */
-    margin: 6px 0;
-    position: relative;
-}
-
-.line::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    border-radius: 5px;
-    background-color: #989796;
-}
-
-.line::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0px;
-    width: 20px;
-    height: 2px;
-    border-radius: 10px;
-    background-color: #989796;
-}
-
-.title h3 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 0.7rem;
-    font-style: normal;
-    font-weight: lighter;
-    margin: 0.5rem 0 0 0;
-    letter-spacing: 0.1rem;
-}
 
 .js-based {
     display: none;
@@ -175,16 +122,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    div.title {
-        width: 520px;
-    }
-
-    .title h2 {
-        font-size: 1rem;
-    }
-    .title h3 {
-        font-size: 0.5rem;
-    }
 
     div.normal {
         height: fit-content;
@@ -203,19 +140,6 @@ footer {
 }
 
 @media screen and (max-width: 540px) {
-
-    /* 480px以下に適用されるCSS（スマホ用） */
-    div.title {
-        width: 80%;
-    }
-
-    .title h2 {
-        font-size: 0.82rem;
-    }
-
-    .title h3{
-        font-size: 0.42rem;
-    }
 
     .item-list li {
         padding: 8px 13px;
@@ -241,21 +165,12 @@ footer {
 
 @media screen and (max-width: 340px) {
     .title h2 {
-        font-size: 0.8rem;
-    }
-    .title h3 {
-        font-size: 0.34rem;
-    }
-    .theme-title{
-        font-size: 0.48rem;
-    }
-}
-
-@media screen and (max-width: 340px) {
-    .title h2 {
         font-size: 0.65rem;
     }
     .title h3 {
         font-size: 0.3rem;
+    }
+    .theme-title{
+        font-size: 0.48rem;
     }
 }

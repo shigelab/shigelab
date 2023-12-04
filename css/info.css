@@ -90,55 +90,11 @@ div.first {
 }
 
 div.title {
-    position: relative;
-    width: 70%;
     margin: 0 auto;
 }
 
-.title h2 {
-    font-size: 1.3rem;
-    font-weight: 400;
-    letter-spacing: 0.15rem;
-    overflow: hidden;
-}
-
-.line {
-    width: 100%;
-    height: 2px;
-    /* background-color: #989796; */
-    margin: 6px 0;
-    position: relative;
-}
-
-.line::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    border-radius: 5px;
-    background-color: #989796;
-}
-
-.line::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0px;
-    width: 20px;
-    height: 2px;
-    border-radius: 10px;
-    background-color: #989796;
-}
-
 .title h3 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 0.68rem;
-    font-style: normal;
-    font-weight: lighter;
-    margin: 0.5rem auto 0;
-    letter-spacing: 0.07rem;
+    font-size: 0.54rem;
 }
 
 .first-text h5 {
@@ -255,28 +211,7 @@ button.center {
 }
 
 div.subtitle {
-    position: relative;
-    width: 37%;
     margin-top: 120px;
-}
-
-.subtitle h2 {
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    position: relative;
-    letter-spacing: 0.2rem;
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-}
-
-.subtitle h3 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 0.7rem;
-    font-style: normal;
-    font-weight: lighter;
-    text-align: end;
-    margin: 4px 0 0 0;
-    letter-spacing: 0.1rem;
 }
 
 .exp {
@@ -663,10 +598,6 @@ footer {
         width: 100%;
     }
 
-    .title h2 {
-        font-size: 1.2rem;
-    }
-
     .title h3 {
         font-size: 0.48rem;
     }
@@ -746,6 +677,10 @@ footer {
 
 @media screen and (max-width: 900px) {
 
+    .title h3 {
+        font-size: 0.36rem;
+    }
+
     .exp-img {
         margin: 7vh auto auto 4vw;
     }
@@ -758,17 +693,12 @@ footer {
 
 @media screen and (max-width: 770px) {
 
-    .title h2 {
-        font-size: 1rem;
-    }
-
     .title h3 {
-        font-size: 0.5rem;
         letter-spacing: 0.05rem;
     }
 
     .first-text {
-        padding: 0 15vw;
+        padding: 0 10vw;
     }
 
     .first-text h5 {
@@ -778,18 +708,6 @@ footer {
 
     .first-text p {
         width: 80%;
-    }
-
-    div.subtitle {
-        width: 360px;
-    }
-
-    .subtitle h2 {
-        font-size: 0.92rem;
-    }
-
-    .subtitle h3 {
-        font-size: 0.72rem;
     }
 
     .exp-text {
@@ -858,12 +776,6 @@ footer {
 
 }
 
-/* @media screen and (max-width: 580px) {
-    .title h2 {
-        font-size: 1rem;
-    }
-} */
-
 @media screen and (max-width: 540px) {
 
     /* 480px以下に適用されるCSS（スマホ用） */
@@ -874,10 +786,7 @@ footer {
 
     .title h2 {
         font-size: 0.8rem;
-    }
-
-    .title h3{
-        font-size: 0.42rem;
+        letter-spacing: 0.15rem;
     }
 
     .normal {
@@ -916,18 +825,6 @@ footer {
 
     div.normal {
         margin-top: 90px;
-    }
-
-    div.subtitle {
-        width: 200px;
-    }
-
-    .subtitle h2 {
-        font-size: 0.84rem;
-    }
-
-    .subtitle h3 {
-        font-size: 0.64rem;
     }
 
     .exp h5 {
@@ -1104,19 +1001,8 @@ footer {
 @media screen and (max-width: 350px) {
     /* 480px以下に適用されるCSS（スマホ用） */
 
-    div.title {
-        width: 95%;
-        margin-top: 0;
-    }
-
     .title h2 {
-        font-size: 0.8rem;
-    }
-
-    .title h3 {
-        width: 90%;
-        font-size: 0.38rem;
-        margin-top: 0.2rem;
+        font-size: 0.7rem;
     }
 
     .background{
@@ -1180,19 +1066,6 @@ footer {
 }
 
 @media screen and (max-width: 320px) {
-    div.title {
-        width: 95%;
-        margin-top: 0;
-    }
-
-    .title h2 {
-        font-size: 0.7rem;
-    }
-
-    .title h3 {
-        width: 90%;
-        font-size: 0.3rem;
-    }
 
     .first-text h5 {
         font-size: 0.5rem;
@@ -1204,16 +1077,7 @@ footer {
     }
 
     div.subtitle {
-        width: 160px;
         margin-top: 10%;
-    }
-
-    .subtitle h2 {
-        font-size: 0.74rem;
-    }
-
-    .subtitle h3 {
-        font-size: 0.64rem;
     }
 
     .exp, .exp-end {
@@ -1273,4 +1137,12 @@ footer {
     .content p {
         font-size: 0.27rem;
     }
+}
+
+@media screen and (max-width: 320px) {
+
+    .title h2 {
+        font-size: 0.6rem;
+    }
+
 }
