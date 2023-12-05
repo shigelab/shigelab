@@ -24,6 +24,11 @@ header .headline {
     font-weight: 400;
 }
 
+.headline a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .navi {
     display: flex;
 }
