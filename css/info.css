@@ -846,18 +846,19 @@ footer {
     .eye {
         width: 190px;
         right: 3vw;
-        top: 12%;
+        top: 16%;
     }
 
     .brain-bt {
         width: 210px;
         right: 3vw;
-        top: 27%;
+        top: 42%;
     }
 
     .man {
         width: 210px;
         right: 3vw;
+        bottom: 20%;
     }
 
     button {
@@ -919,20 +920,6 @@ footer {
         margin: 10% auto;
     }
 
-}
-
-@media screen and (max-width: 540px) and (max-height: 780px) {
-    .eye {
-        top: 16%;
-    }
-
-    .brain-bt {
-        top: 42%;
-    }
-
-    .man {
-        bottom: 20%;
-    }
 }
 
 @media screen and (min-width: 1000px) and (max-height: 800px) {

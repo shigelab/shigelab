@@ -47,15 +47,15 @@ fetch(api_url)
         }, {
             scrollTrigger: {
                 trigger: ".news-list",
-                start: "top center",
+                start: "top bottom",
                 endTrigger: ".page-list",
                 end: "bottom center",
                 // markers: true,
-                toggleActions: 'play none none reverse',
+                toggleActions: 'play none none none',
             },
             opacity: 1, // 最終不透明度
-            duration: 0.4, // アニメーションの時間
-            stagger: 0.5, // 要素ごとの適切な遅延を設定
+            duration: 0.2, // アニメーションの時間
+            stagger: 0.2, // 要素ごとの適切な遅延を設定
         });
     });
 

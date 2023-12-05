@@ -47,10 +47,6 @@ div.member {
     height: fit-content;
 }
 
-div.title {
-    margin: 11% auto 10%;
-}
-
 .white-line::before {
     content: "";
     position: absolute;
