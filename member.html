@@ -10,11 +10,14 @@
     <link rel="stylesheet" type="text/css" href="css/member.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="js/hide_animation.js" defer></script>
     <script src="js/responsive_header.js" defer></script>
+    <script src="js/button_ani.js" defer></script>
+    <link rel="shortcut icon" href="image/shigelab_small.ico">
 </head>
 
 <body>
@@ -26,9 +29,9 @@
     <header class="header-anime header-bg">
         <h1 class="headline"><a href="index.html"> SHIGEMASU LAB </a></h1>
         <div class="responsive-btn">
-            <div class="menu-line1"></div>
-            <div class="menu-line2"></div>
-            <div class="menu-line3"></div>
+            <div class="menu-line1 mline"></div>
+            <div class="menu-line2 mline"></div>
+            <div class="menu-line3 mline"></div>
         </div>
         <nav class="navi">
             <ul class="navi-list">
@@ -219,12 +222,12 @@
         <div class="alumni">
             <div class="normal">
                 <div class="subtitle normal-title">
-                    <h2>卒業生</h2>
-                    <div class="white-line"></div>
+                    <h2>Alumni</h2>
+                    <div class="line"></div>
                     <h3>Alumni</h3>
                 </div>
                 <p>
-                    谷部好子: 東京大学 大学院総合文化研究科 特任研究員 <br>
+                    谷部好子: <a href="https://researchmap.jp/researchers?institution_code=A091*&affiliation_search_range=affiliations">国立研究開発法人量子科学技術研究開発機構</a> 量子生命・医学部門 研究員 <br>
                     蔵冨恵: 岐阜聖徳学園大学 教育学部 講師 <br>
                     波多野文: 株式会社イデアラボ コンサルティング事業部 研究員, 京都大学 大学院教育学研究科 非常勤研究員 <br>
                     Yan Pengfei: 太原理工大学 講師<br>
@@ -233,8 +236,38 @@
                 </p>
             </div>
         </div>
+        <div class="end-footer black-back">
+            <h3>About Us</h3>
+            <!-- <img src="image/shigelab_logo3.png" class="bottom_logo"> -->
+            <div class="link-access">
+                <div class="text-box">
+                    <h4 class="end-title-j">高知工科大学 知覚認知脳情報研究室</h4>
+                    <h5 class="end-title-e">Perceptual and Cognitive Brain Information Processing Lab</h5>
+                    <p class="access">〒782-8502 高知県香美市土佐山田町宮ノ口185 高知工科大学A棟3階 A306</p>
+                    <div class="link-box end">
+                        <p> - <a href="https://www.kochi-tech.ac.jp/">高知工科大学</a><br>
+                            - <a href="http://www.info.kochi-tech.ac.jp/">高知工科大学 情報学群</a><br>
+                            - <a href="https://www.kochi-tech.ac.jp/profile/ja/shigemasu-hiroaki.html">高知工科大学
+                                繁桝博昭</a><br>
+                            - <a href="https://twitter.com/shigelab_a306">X(Twitter)</a><br>
+                            - <a href="https://shigelab.com">過去のWebページ</a>
+                        </p>
+                    </div>
+                    <button class="bgleft white2 form-button" onclick="location.href='./contact.html'"><span>CONTACT
+                            <img id="arrow-img" src="image/arrow_white.svg" class="arrow"></span>
+                    </button>
+                </div>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.4069427477084!2d133.71723831098197!3d33.62068904028361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3551fea409c4f4f5%3A0xb58b5ba34875c748!2z6auY55-l5bel56eR5aSn5a2mIOmmmee-juOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1697700976911!5m2!1sja!2sjp"
+                    class="map" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
     </main>
     <script src="js/title_ani.js" defer></script>
+    <script src="js/gsap_header.js" defer></script>
     <script src="js/member.js"></script>
 
     <footer>

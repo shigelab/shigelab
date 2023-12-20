@@ -73,8 +73,8 @@ fetch(api_url)
                 toggleActions: 'play none none reverse',
             },
             opacity: 1, // 最終不透明度
-            duration: .2, // アニメーションの時間
-            stagger: 0.2, // 要素ごとの適切な遅延を設定
+            duration: .1, // アニメーションの時間
+            stagger: 0.1, // 要素ごとの適切な遅延を設定
         });
     });
 

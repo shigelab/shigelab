@@ -132,38 +132,3 @@ gsap.set('.list-button',
         x: 20,
     }
 );
-
-
-gsap.to(
-    ".header-anime",
-    {
-        scrollTrigger: {
-            trigger: ".black-back",
-            start: "center 70%",
-            end: "center 70%",
-            // markers: true,
-            scrub: true
-        },
-        css: {
-            backgroundColor: "#FCFAF9"
-        }
-    },
-);
-
-
-// gsap.fromTo(".link-access",
-//     {
-//         x: 1000,
-//     },
-//     {
-//         scrollTrigger: {
-//             trigger: ".link-box",
-//             // markers: true,
-//             start: "top 80%",
-//             end: "bottom center",
-//             toggleActions: 'play none none none',
-//         },
-//         x: 0,
-//         duration: 1.2,
-//     }
-// );

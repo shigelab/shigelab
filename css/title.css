@@ -8,7 +8,7 @@ div.title {
 }
 
 .title h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.3rem;
     overflow: hidden;
@@ -64,7 +64,7 @@ div.subtitle {
     font-style: normal;
     font-weight: 400;
     position: relative;
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.3rem;
 }
 
 .subtitle h3 {
@@ -76,6 +76,16 @@ div.subtitle {
     margin: 4px 0 0 0;
     letter-spacing: 0.1rem;
     margin-top: 0.3rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .title h2 {
+        font-size: 1.3rem;
+    }
+    .subtitle h2 {
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+    }
 }
 
 @media screen and (max-width: 900px) {

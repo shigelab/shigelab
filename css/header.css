@@ -73,7 +73,7 @@ header .headline {
     position: absolute;
     width: 80%;
     /*線の長さ*/
-    height: 1px;
+    height: 2px;
     /*線の太さ*/
     left: calc(50% - 40% / 2);
     /*中央から長さの半分を引く*/
@@ -135,6 +135,7 @@ header .headline {
     }
 
     .menu-active {
+        background-color: rgba(0,0,0,0);
         display: flex;
         height: 540px;
         width: 100vw;

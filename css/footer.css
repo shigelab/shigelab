@@ -1,0 +1,271 @@
+.end-footer {
+    width: 100vw;
+    height: fit-content;
+    color: #FCFAF9;
+    background-color: #333333;
+    padding: 60px 80px;
+    overflow: hidden;
+    position: relative;
+}
+
+.end-footer h3 {
+    font-size: 1.4rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    width: fit-content;
+    letter-spacing: 0.05rem;
+}
+
+.end-title-j {
+    font-size: 0.7rem;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 400;
+    width: fit-content;
+    letter-spacing: 0.05rem;
+    margin: 1rem 0 0.2rem;
+    padding: 0;
+}
+
+.end-title-e {
+    font-size: 0.64rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    width: fit-content;
+    letter-spacing: 0.05rem;
+    margin: 0 0 0.8rem;
+}
+
+.access {
+    font-size: 0.68rem;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 300;
+    width: fit-content;
+    letter-spacing: 0.05rem;
+    margin: 0 0 0.8rem;
+    padding: 0;
+}
+
+.link-access {
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    margin: 10px 0;
+    letter-spacing: 0.1rem;
+    position: relative;
+}
+
+.link-box {
+    display: flex;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.link-box a {
+    font-weight: 500;
+    color: #2EB4D1;
+    /* color: #FCFAF9; */
+}
+
+.end p {
+    font-size: 0.62rem;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 400;
+    width: fit-content;
+}
+
+.text-box {
+    width: fit-content;
+    height: auto;
+    float: left;
+}
+
+button.white2:hover span {
+    color: #333333;
+}
+
+.white2:before {
+    background: #FCFAF9;
+}
+
+button.white2 {
+    color: #FCFAF9;
+    border-color: #FCFAF9;
+}
+
+/*== 背景が流れる（左から右） */
+.bgleft:before {
+    content: '';
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    /*色や形状*/
+    /* background: #FCFAF9; */
+    /*背景色*/
+    width: 100%;
+    height: 100%;
+    /*アニメーション*/
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+}
+
+/*hoverした際の形状*/
+.bgleft:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+.form-button {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    float: right;
+    text-align: left;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding-left: 0.6rem;
+    color: #FCFAF9;
+    background-color: #333333;
+    border-style: solid;
+    border-color: #FCFAF9;
+    border-radius: 2px;
+    width: 240px;
+    height: 80px;
+    font-size: 0.85rem;
+    letter-spacing: 0.1rem;
+    /*アニメーション*/
+    position: relative;
+    overflow: hidden;
+    transition: ease .2s;
+    cursor: pointer;
+}
+
+.arrow {
+    width: 32px;
+    height: auto;
+    margin-right: 14px;
+    margin-top: 6px;
+    float: right;
+}
+
+/*ボタン内spanの形状*/
+.form-button span {
+    position: relative;
+    z-index: 7;
+    /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /* color: #FCFAF9; */
+}
+
+
+.map {
+    width: 28vw;
+    height: 21vw;
+    float: right;
+}
+
+footer {
+    font-size: 0.45rem;
+    font-family: 'Ubuntu', sans-serif;
+    ;
+    letter-spacing: 0.1rem;
+    color: #FCFAF9;
+    background-color: #333333;
+    text-align: center;
+    padding: 0.4rem;
+}
+
+@media screen and (max-width: 1080px) and (max-height: 1400px) {
+
+    .map {
+        width: 80vw;
+        height: 30vw;
+        float: none;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .end-footer {
+        padding: 50px 30px;
+    }
+
+    .form-button {
+        width: 180px;
+        height: 60px;
+        font-size: 0.72rem;
+    }
+
+
+    .end-title-j {
+        font-size: 0.62rem;
+    }
+
+    .end-title-e {
+        font-size: 0.54rem;
+    }
+
+    .access {
+        font-size: 0.48rem;
+    }
+
+    .map {
+        margin-top: 40px;
+    }
+
+    .arrow {
+        width: 24px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+
+    .end-title-j {
+        font-size: 0.56rem;
+    }
+
+    .end-title-e {
+        font-size: 0.5rem;
+    }
+
+    .access {
+        font-size: 0.44rem;
+    }
+
+    .end p {
+        font-size: 0.5rem;
+    }
+
+    .form-button {
+        font-size: 0.62rem;
+        width: 153px;
+        height: 51px;
+    }
+
+    .arrow {
+        width: 18px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .end-title-j {
+        font-size: 0.42rem;
+    }
+
+    .end-title-e {
+        font-size: 0.38rem;
+    }
+
+    .access {
+        font-size: 0.32rem;
+    }
+
+    .end p {
+        font-size: 0.4rem;
+    }
+}
