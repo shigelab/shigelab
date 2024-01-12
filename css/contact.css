@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     overflow-x: auto;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     box-sizing: border-box;
 }
 
@@ -38,6 +38,7 @@ div.normal {
 
 div.title {
     color: #FCFAF9;
+    margin: 11% auto 4%;
 }
 
 .line {
@@ -186,7 +187,7 @@ button.black {
 }
 
 button.center {
-    margin: 20px auto 0;
+    margin: 40px auto 80px;
     display: block;
 }
 

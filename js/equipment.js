@@ -14,7 +14,7 @@ fetch(api_url)
             var clone_item_element = item_element[0].cloneNode(true); //元となるHTMLの要素を複製
             clone_item_element.classList.add("item" + i);
             clone_item_element.classList.remove('js-based'); //複製した要素からクラス削除
-            if (json[i].image !== "") clone_item_element.querySelector('img').setAttribute('src', 'http://drive.google.com/uc?export=view&id=' + json[i].image); //src属性に取得した画像を設定;
+            if (json[i].image !== "") clone_item_element.querySelector('img').setAttribute('src', 'https://drive.google.com/thumbnail?id=' + json[i].image + '&sz=w1000'); //src属性に取得した画像を設定;
             else clone_item_element.querySelector('img').setAttribute('src', 'image/noimage2.png'); //src属性に取得した画像を設定
             clone_item_element.querySelector('h3').textContent = json[i].name;
             item_element[0].parentNode.appendChild(clone_item_element); //元となるHTMLの要素の後ろに複製した要素を追加
@@ -23,7 +23,7 @@ fetch(api_url)
             var clone_popup_element = popup_element[0].cloneNode(true); //元となるHTMLの要素を複製
             clone_popup_element.setAttribute("id", ("item" + i));
             clone_popup_element.classList.remove('js-based'); //複製した要素からクラス削除
-            if (json[i].image !== "") clone_popup_element.querySelector('img').setAttribute('src', 'http://drive.google.com/uc?export=view&id=' + json[i].image); //src属性に取得した画像を設定;
+            if (json[i].image !== "") clone_popup_element.querySelector('img').setAttribute('src', 'https://drive.google.com/thumbnail?id=' + json[i].image + '&sz=w1000'); //src属性に取得した画像を設定;
             else clone_popup_element.querySelector('img').setAttribute('src', 'image/noimage2.png'); //src属性に取得した画像を設定
             clone_popup_element.querySelector('h2').textContent = json[i].name;
             clone_popup_element.querySelector('h3').textContent = json[i].type;
