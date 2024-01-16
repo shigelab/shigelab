@@ -4,13 +4,22 @@ const videos = [
     document.getElementById("v3")
 ];
 let currentVideoIndex = getRandomInt(0, videos.length);
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 function playVideo(index) {
     // すべての動画を一時停止
     videos.forEach((video, i) => {
         if (i === index) {
+            // Safariの場合は再生ボタンを表示
+            if (isSafari) {
+                video.style.display = 'block';
+                video.setAttribute('controls', 'controls');
+            } else {
+                video.removeAttribute('controls');
+            }
             // Show loading animation.
             var playPromise = video.play();
+            video.removeAttribute('controls');
 
             if (playPromise !== undefined) {
                 playPromise.then(_ => {
@@ -21,7 +30,11 @@ function playVideo(index) {
                     .catch(error => {
                         // Auto-play was prevented
                         // Show paused UI.
-                        video.style.display = 'none';
+                        // Safariの場合は再生ボタンを表示
+                        if (!isSafari) {
+                            video.style.display = 'none';
+                        }
+                        // console.log(error);
                     });
             }
         } else {
