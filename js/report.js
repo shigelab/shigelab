@@ -16,6 +16,8 @@ fetch(api_url)
                 document.getElementById('title').innerText = json[i].title;
                 document.getElementById('date').innerText = json[i].date;
                 document.getElementById('p').innerHTML = json[i].p;
+                twttr.widgets.load();
+                
                 if (number > 0) {
                     var prev_element = `<button class="bgright black prev" onclick="location.href='report.html?id=${json[i - 1].id}&number=${i - 1}'"><span><img id="arrow-img" src="image/arrow_black.svg" class="arrow">PREV</span></button>`;
                     document.getElementById('btns').innerHTML += prev_element;
