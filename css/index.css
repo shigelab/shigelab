@@ -48,9 +48,10 @@ div.normal {
 
 .gif-logo {
     /* top: 65vh; */
-    bottom: 56px;
-    left: 47px;
-    width: 430px;
+    bottom: 5%;
+    /* left: 3%; */
+    right: 3%;
+    width: 50%;
     height: auto;
     position: absolute;
     z-index: 8;
@@ -60,9 +61,10 @@ div.normal {
 .logo {
     opacity: 0;
     /* top: 70vh; */
-    bottom: 72px;
-    left: 60px;
-    width: 420px;
+    bottom: 5%;
+    /* left: 4%; */
+    right: 2%;
+    width: 50%;
     height: auto;
     position: absolute;
     z-index: 8;
@@ -350,8 +352,8 @@ button.black {
 }
 
 .list-item img {
-    width: 280px;
-    height: 280px;
+    width: 90%;
+    height: 90%;
     object-fit: contain;
     display: flex;
     align-items: center;
@@ -460,6 +462,24 @@ button.right {
     }
 }
 
+@media screen and (min-width: 1000px){
+    .logo{
+        width: 35%;
+    }
+    .gif-logo{
+        width: 35%;
+    }
+}
+
+@media screen and (min-height: 1000px) and (max-width: 540px){
+    .logo{
+        width: 40%;
+    }
+    .gif-logo{
+        width: 40%;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .explain-text h3 {
@@ -497,22 +517,18 @@ button.right {
 
     #v1, #v2, #v3 {
         scale: 2.5;
-        top: 60%;
+        top: 70%;
         left: 120%;
         transform: translate(-50%, -50%);
         overflow: hidden;
     }
 
     .gif-logo {
-        bottom: 70px;
-        left: 20px;
-        width: 320px;
+        width: 80%;
     }
 
     .logo {
-        bottom: 80px;
-        left: 30px;
-        width: 320px;
+        width: 80%;
     }
 
     div.explain {
@@ -627,12 +643,10 @@ button.right {
 
 @media screen and (max-width: 320px) {
     .logo{
-        width: 220px;
-        height: auto;
+        width: 80%;
     }
     .gif-logo{
-        width: 220px;
-        height: auto;
+        width: 80%;
     }
 
     div.explain {
@@ -661,4 +675,110 @@ button.right {
         width: 643px;
         margin: 38vh auto auto -180px;
     }
+}
+
+@media screen and (max-height: 530px){
+    .logo{
+        width: 35%;
+        
+    }
+    .gif-logo{
+        width: 35%;
+    }
+
+    div.explain {
+        height: 140vh;
+    }
+    .explain-text h3 {
+        font-size: 1.4rem;
+        width: 21rem;
+    }
+
+    .explain-text h5 {
+        font-size: 0.9rem;
+    }
+
+    div.normal {
+        height: 110vh;
+    }
+
+    .list-item img {
+        width: 80%;
+        height: 80%;
+    }
+
+    button{
+        font-size: 0.74rem;
+        width: 180px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-height: 450px){
+    div.explain {
+        height: 160vh;
+    }
+
+    .explain-text h3 {
+        font-size: 1.2rem;
+        width: 18.8rem;
+    }
+
+    .explain-text h5 {
+        font-size: 0.8rem;
+    }
+
+    .explain-text p {
+        font-size: 0.5rem;
+    }
+
+    div.normal {
+        height: 120vh;
+    }
+
+    .list-item img {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-height: 390px){
+    div.explain {
+        height: 180vh;
+    }
+
+    div.normal {
+        height: 140vh;
+    }
+
+    /* .logo{
+        width: 30%;
+    }
+    .gif-logo{
+        width: 30%;
+    } */
+}
+
+@media screen and (max-height: 340px){
+    div.explain {
+        height: 200vh;
+    }
+
+    div.normal {
+        height: 160vh;
+    }
+
+    .logo{
+        width: 30%;
+    }
+    .gif-logo{
+        width: 30%;
+    }
+}
+
+@media screen and (max-height: 340px){
+    div.explain {
+        height: 220vh;
+    }
+
 }

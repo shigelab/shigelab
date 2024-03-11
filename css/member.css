@@ -504,3 +504,66 @@ div.normal-title{
         font-size: 0.42rem;
     }
 }
+
+@media screen and (max-width: 300px) {
+    .title h2 {
+        font-size: 0.6rem;
+    }
+    .title h3 {
+        font-size: 0.28rem;
+    }
+    .subtitle h2 {
+        font-size: 0.46rem;
+    }
+    .subtitle h3 {
+        font-size: 0.26rem;
+    }
+    .pi-exp{
+        font-size: 0.32rem;
+    }
+    .alumni p{
+        font-size: 0.32rem;
+    }
+}
+
+@media screen and (max-height: 530px) {
+    .title h2 {
+        font-size: 1rem;
+    }
+    .title h3 {
+        font-size: 0.6rem;
+    }
+    .subtitle h2 {
+        font-size: 0.82rem;
+    }
+    .subtitle h3 {
+        font-size: 0.64rem;
+    }
+    .pi-exp{
+        font-size: 0.42rem;
+    }
+    .alumni p{
+        font-size: 0.42rem;
+    }
+}
+
+@media screen and (max-height: 380px) {
+    .title h2 {
+        font-size: 0.9rem;
+    }
+    .title h3 {
+        font-size: 0.54rem;
+    }
+    .subtitle h2 {
+        font-size: 0.74rem;
+    }
+    .subtitle h3 {
+        font-size: 0.54rem;
+    }
+    .pi-exp{
+        font-size: 0.36rem;
+    }
+    .alumni p{
+        font-size: 0.36rem;
+    }
+}

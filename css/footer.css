@@ -273,3 +273,34 @@ footer {
         font-size: 0.4rem;
     }
 }
+
+@media screen and (max-height: 530px) {
+    .form-button{
+        font-size: 0.74rem;
+        width: 180px;
+        height: 60px;
+    }
+    .end-title-j {
+        font-size: 0.65rem;
+    }
+
+    .end-title-e {
+        font-size: 0.6rem;
+    }
+    .access{
+        font-size: 0.6rem;
+    }
+    .end p {
+        font-size: 0.6rem;
+    }
+
+    button .arrow{
+        width: 28px;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .access{
+        font-size: 0.5rem;
+    }
+}

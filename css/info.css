@@ -999,8 +999,14 @@ div.subtitle {
     }
 
     .content p {
-        font-size: 0.24rem;
+        font-size: 0.28rem;
         top: 80%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .form-button .arrow{
+        width: 18px;
     }
 }
 
@@ -1146,14 +1152,18 @@ div.subtitle {
     }
 
     .content p {
-        font-size: 0.22rem;
+        font-size: 0.25rem;
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 300px) {
 
     .title h2 {
         font-size: 0.6rem;
+    }
+
+    .content p {
+        font-size: 0.22rem;
     }
 
 }
