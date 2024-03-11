@@ -743,24 +743,33 @@ div.subtitle {
         margin: 7vh auto auto;
     }
 
-    .eqp-popup .content {
+    /* .eqp-popup .content {
         height: fit-content;
+    } */
+
+    .eqp-popup .content {
+        width: 70vw;
+        height: 70vw;
     }
 
     .eqp-pop-title{
-        margin: 10% auto auto;
+        margin: auto;
         width: 80%;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    /* .content img{
-        width: 80%;
-        position: relative;
-        display: block;
-        margin: 5% auto 0;
-        top: 0;
-        left: 0;
-        transform: none;
-    } */
+    .content img{
+        width: 60%;
+        height: auto;
+        max-height: none;
+        margin: auto;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     .eqp-pop-title h2 {
         font-size: 0.64rem;
@@ -773,7 +782,10 @@ div.subtitle {
     .content p {
         font-size: 0.3rem;
         width: 80%;
-        margin: 1% auto 10%;
+        margin: auto;
+        top: 75%;
+        left: 40%;
+        transform: translate(-50%, -50%);
     }
 
     .equipment-item img {
@@ -898,6 +910,10 @@ div.subtitle {
         font-size: 0.5rem;
     }
 
+    .eqp-popup .content {
+        height: 90vw;
+    }
+
     .eqp-pop-title h2 {
         font-size: 0.64rem;
     }
@@ -908,8 +924,6 @@ div.subtitle {
 
     .content p {
         font-size: 0.3rem;
-        width: 80%;
-        margin: 10% auto;
     }
 
 }
@@ -968,12 +982,25 @@ div.subtitle {
         bottom: 16%;
     }
 
+    .eqp-pop-title{
+        width: 70%;
+    }
+
     .eqp-pop-title h2 {
         font-size: 0.5rem;
     }
     
     .eqp-pop-title h3 {
         font-size: 0.4rem;
+    }
+
+    .eqp-popup .content {
+        height: 100vw;
+    }
+
+    .content p {
+        font-size: 0.24rem;
+        top: 80%;
     }
 }
 
@@ -1041,6 +1068,11 @@ div.subtitle {
 
     button .arrow {
         margin-top: 7px;
+        width: 18px;
+    }
+
+    .eqp-popup .content {
+        height: 110vw;
     }
 }
 
@@ -1114,7 +1146,7 @@ div.subtitle {
     }
 
     .content p {
-        font-size: 0.27rem;
+        font-size: 0.22rem;
     }
 }
 
