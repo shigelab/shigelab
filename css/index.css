@@ -51,7 +51,7 @@ div.normal {
     bottom: 5%;
     /* left: 3%; */
     right: 3%;
-    width: 50%;
+    width: 45%;
     height: auto;
     position: absolute;
     z-index: 8;
@@ -64,7 +64,7 @@ div.normal {
     bottom: 5%;
     /* left: 4%; */
     right: 2%;
-    width: 50%;
+    width: 45%;
     height: auto;
     position: absolute;
     z-index: 8;
@@ -679,11 +679,11 @@ button.right {
 
 @media screen and (max-height: 530px){
     .logo{
-        width: 35%;
+        width: 40%;
         
     }
     .gif-logo{
-        width: 35%;
+        width: 40%;
     }
 
     div.explain {
@@ -769,10 +769,10 @@ button.right {
     }
 
     .logo{
-        width: 30%;
+        width: 35%;
     }
     .gif-logo{
-        width: 30%;
+        width: 35%;
     }
 }
 
