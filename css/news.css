@@ -67,6 +67,7 @@ div.page {
 .news-item img {
     width: 310px;
     height: 310px;
+    object-fit: contain;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +85,7 @@ div.page {
     color: #333333;
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 200;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     margin-left: 15px;
     height: 1.8rem;
 }

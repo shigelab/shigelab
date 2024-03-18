@@ -352,8 +352,8 @@ button.black {
 }
 
 .list-item img {
-    width: 90%;
-    height: 90%;
+    width: 310px;
+    height: 310px;
     object-fit: contain;
     display: flex;
     align-items: center;
@@ -388,9 +388,10 @@ button.black {
 
 .news-title {
     width: 80%;
+    height: 2rem;
     bottom: 0;
     margin: auto auto 0.4rem auto;
-    font-size: 0.7rem;
+    font-size: 0.54rem;
     font-weight: 200;
     letter-spacing: 0.1rem;
     text-align: left;
