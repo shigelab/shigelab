@@ -94,7 +94,7 @@ div.page {
     color: #333333;
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 200;
-    font-size: 0.62rem;
+    font-size: 0.54rem;
     margin: 5px auto 0 15px;
     height: 2.4rem;
     width: 90%;
@@ -190,11 +190,11 @@ footer {
     }
 
     .news-item h3 {
-        font-size: 0.72rem;
+        font-size: 0.62rem;
     }
 
     .news-item p {
-        font-size: 0.54rem;
+        font-size: 0.5rem;
     }
 
     .navi-list li {
