@@ -64,6 +64,43 @@ div.page {
     padding: 8px;
 }
 
+.news-item:hover{
+    background-color: #333333;
+    color: #FCFAF9;
+    animation-name: fadeInAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.news-item:hover h3{
+    color: #FCFAF9;
+    animation-name: fadeInAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.news-item:hover p{
+    color: #FCFAF9;
+    animation-name: fadeInAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeInAnime {
+    from {
+        background-color: #FCFAF9;
+        color: #333333;
+        opacity: 0.5;
+    }
+
+    to {
+        background-color: #333333;
+        color: #FCFAF9;
+        opacity: 1;
+    }
+}
+
 .news-item img {
     width: 310px;
     height: 310px;

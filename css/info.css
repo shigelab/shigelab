@@ -141,7 +141,7 @@ button {
 /*ボタン内spanの形状*/
 button span {
     position: relative;
-    z-index: 3;
+    z-index: 7;
     /*z-indexの数値をあげて文字を背景よりも手前に表示*/
     /* color: #FCFAF9; */
 }
