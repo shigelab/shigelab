@@ -105,8 +105,9 @@ p {
 }
 
 #text img{
-    max-width: 30vw;
-    max-height: 30vw;
+    max-width: 35vw;
+    max-height: 35vw;
+    margin: 1rem auto;
 }
 
 .end {
@@ -296,6 +297,10 @@ footer {
     .title h2 {
         font-size: 0.9rem;
     }
+    #text img{
+        max-width: 40vw;
+        max-height: 40vw;
+    }
 
     .back-heart{
         width: 60vw;
@@ -338,6 +343,11 @@ footer {
         width: 80%;
     }
 
+    #text img{
+        max-width: 50vw;
+        max-height: 50vw;
+    }
+
     .btns {
         width: 80%;
     }
@@ -352,9 +362,17 @@ footer {
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 510px) {
+
+    #text img{
+        max-width: 60vw;
+        max-height: 60vw;
+    }
+
     button {
-        font-size: 0.58rem;
+        font-size: 0.54rem;
+        width: 27vw;
+        height: 9vw;
         max-width: 153px;
         max-height: 51px;
     }
@@ -365,7 +383,20 @@ footer {
     }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 420px) {
+    button {
+        font-size: 0.52rem;
+        width: 30vw;
+        height: 10vw;
+    }
+
+    button .arrow {
+        width: 18px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 380px) {
     .title h2 {
         font-size: 0.75rem;
     }
@@ -375,8 +406,18 @@ footer {
     }
 
     button {
-        padding: 4%;
-        width: fit-content;
-        height: fit-content;
+        font-size: 0.48rem;
+        width: 33vw;
+        height: 11vw;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    button .arrow {
+        margin-right: 2%;
+    }
+
+    .prev{
+        padding-right: 0;
     }
 }

@@ -6,7 +6,7 @@ fetch(api_url)
         return fetch_data.json();
     })
     .then(function (json) {
-        for (var i = 0; i < 3 && i < json.length; i++) {
+        for (var i = 0; i < 4 && i < json.length; i++) {
             var base_element = document.getElementsByClassName('list-item js-based');
             var clone_element = base_element[0].cloneNode(true);
             clone_element.classList.remove('js-based');
@@ -14,6 +14,7 @@ fetch(api_url)
             if (json[i].headerImg != "") {
                 clone_element.querySelector('.list-item img').setAttribute('src', json[i].headerImg);
             }
+            clone_element.setAttribute('id', 'news'+i);
             clone_element.querySelector('h3').textContent = json[i].title;
             clone_element.querySelector('a').href = `report.html?id=${json[i].id}&number=${i}`;
 
