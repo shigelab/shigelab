@@ -16,6 +16,7 @@ fetch(api_url)
                 document.getElementById('title').innerText = json[i].title;
                 document.getElementById('date').innerText = json[i].date;
                 document.getElementById('text').innerHTML = json[i].p;
+                document.querySelector('.twitter-share-button').setAttribute('data-text', json[i].title);
                 twttr.widgets.load();
                 
                 if (number > 0) {
